@@ -1,1 +1,1 @@
-# easyspot develop bump 2
+# easyspot develop bump 2.3
