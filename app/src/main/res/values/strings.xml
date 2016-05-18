@@ -1,9 +1,13 @@
 <resources>
     // App General
     <string name="app_name">EasySpot</string>
+    
+    //Home screen btn
+    <string name="search_camping">search camping</string>
+    <string name="btn_reservations">reservations</string>
+    <string name="btn_account">account</string>
 
-
-    // Booking
+    //Booking
     <string name="name">Name</string>
     <string name="phoneNumber">Phone</string>
     <string name="Email">E-mail</string>
