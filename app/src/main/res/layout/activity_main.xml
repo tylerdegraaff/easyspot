@@ -12,56 +12,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="log in"
+        android:text="@string/search_camping"
         android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="189dp"
-        android:onClick="onLogin" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Username"
-        android:id="@+id/textView3"
+        android:onClick="onSearchCamping"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Password"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
-<<<<<<< HEAD
-    tools:context="nl.hr.tylerdegraaff.easyspot.MainActivity"
-    android:background="@android:color/holo_green_dark">
-=======
-    tools:context="nl.hr.tylerdegraaff.easyspot.MainActivity" >
->>>>>>> c5225038bfd0dcde8dc0cc6cf4c20a64d88d8fc3
+        android:layout_marginTop="111dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,14 +27,4 @@
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_camping"
-        android:id="@+id/button2"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp"
-        android:onClick="onSearchCamping" />
 </RelativeLayout>
