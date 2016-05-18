@@ -38,7 +38,8 @@
         android:id="@+id/textView59"
         android:layout_marginTop="26dp"
         android:layout_below="@+id/textView58"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="AccountClick" />
 
     <Button
         android:layout_width="wrap_content"

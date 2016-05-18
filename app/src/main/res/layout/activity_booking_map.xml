@@ -19,5 +19,6 @@
         android:id="@+id/button12"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary"
+        android:onClick="Reservate" />
 </RelativeLayout>

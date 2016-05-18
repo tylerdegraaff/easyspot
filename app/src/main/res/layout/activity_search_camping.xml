@@ -17,7 +17,7 @@
         android:foreground="@drawable/abc_ic_search_api_mtrl_alpha"
         android:foregroundGravity="left|center_vertical"
         android:foregroundTintMode="src_in"
-        android:text="zoek op plaats of camping"
+        android:text="search on place or camping"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textStyle="italic"
@@ -123,6 +123,7 @@
         android:id="@+id/imageView7"
         android:src="@drawable/arrow_right"
         android:layout_alignTop="@+id/textView55"
-        android:layout_alignStart="@+id/imageView6" />
+        android:layout_alignStart="@+id/imageView6"
+        android:onClick="Reservate" />
 
 </RelativeLayout>

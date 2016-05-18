@@ -18,6 +18,7 @@
 
     // Buttons Bookings
     <string name="btn_next">Next</string>
+    <string name="btn_book_now">Book now</string>
 
     <string-array name="dropdown_plot_options">
         <item>Small</item>
