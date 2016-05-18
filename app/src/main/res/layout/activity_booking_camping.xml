@@ -16,4 +16,26 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:spinnerMode="dropdown" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/booking_start_date"
+        android:layout_below="@+id/spinner_caravan"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/Start_date" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/booking_end_date"
+        android:layout_below="@+id/booking_start_date"
+        android:layout_alignParentStart="true"
+        android:text="@string/End_date" />
+
 </RelativeLayout>
