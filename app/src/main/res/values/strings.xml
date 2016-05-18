@@ -14,6 +14,7 @@
     <string name="Address">Address</string>
     <string name="Start_date">Start date</string>
     <string name="End_date">End date</string>
+    <string name="spot_selected">Your spot is selected</string>
 
     // Buttons Bookings
     <string name="btn_next">Next</string>
@@ -23,4 +24,5 @@
         <item>Medium</item>
         <item>Large</item>
     </string-array>
+
 </resources>

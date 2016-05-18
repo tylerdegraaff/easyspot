@@ -9,114 +9,252 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity"
     android:textAlignment="textStart"
-    android:gravity="start">
+    android:gravity="start"
+    android:background="@color/colorSecondary">
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:id="@+id/plotOptions"
         android:spinnerMode="dropdown"
-        android:padding="10dp"
         android:dropDownWidth="wrap_content"
-        android:layout_alignParentTop="true"
-        android:gravity="left"
-        android:textAlignment="textStart" />
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/textView35"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:inputType="date"
         android:ems="10"
         android:id="@+id/booking_start_date"
         android:text="31-08-2016"
-        android:layout_below="@+id/textView7"
+        android:layout_below="@+id/textView36"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:inputType="date"
         android:ems="10"
         android:id="@+id/booking_end_date"
         android:text="06-09-2016"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText6"
-        android:text="4"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText7"
-        android:text="2"
-        android:layout_above="@+id/checkBox"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pets"
-        android:id="@+id/checkBox"
-        android:checked="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView37"
+        android:layout_toStartOf="@+id/button11"
+        android:layout_marginEnd="19dp"
+        android:textIsSelectable="false" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Plot size"
+        android:id="@+id/textView35"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goToStepThree"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Start date"
-        android:id="@+id/textView7"
-        android:textAlignment="textStart"
+        android:id="@+id/textView36"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
         android:layout_below="@+id/plotOptions"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="End date"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/booking_start_date"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textView37"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/textView36"
+        android:layout_alignEnd="@+id/radioButton4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Kids"
-        android:id="@+id/textView10"
-        android:layout_above="@+id/editText7"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Persons"
-        android:id="@+id/textView9"
-        android:layout_below="@+id/booking_end_date"
+        android:id="@+id/textView38"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/booking_start_date"
+        android:layout_alignEnd="@+id/textView35" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Kids"
+        android:id="@+id/textView39"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/textView38"
+        android:layout_alignStart="@+id/textView37" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText11"
+        android:text="4"
+        android:layout_below="@+id/textView39"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/booking_start_date" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText12"
+        android:text="2"
+        android:layout_alignTop="@+id/editText11"
+        android:layout_alignStart="@+id/booking_end_date"
+        android:layout_alignEnd="@+id/booking_end_date" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sea"
+        android:id="@+id/radioButton"
+        android:checked="true"
+        android:layout_below="@+id/textView40"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playground"
+        android:id="@+id/radioButton2"
+        android:checked="false"
+        android:layout_below="@+id/radioButton"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Plot size"
-        android:id="@+id/textView18"
-        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Plot preferences"
+        android:id="@+id/textView40"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/editText11"
+        android:layout_alignStart="@+id/textView38" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swimming pool"
+        android:id="@+id/radioButton3"
+        android:layout_alignBottom="@+id/radioButton"
+        android:layout_alignStart="@+id/editText12"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton4"
+        android:layout_below="@+id/radioButton3"
+        android:layout_alignStart="@+id/radioButton3"
+        android:checked="true"
+        android:text="Pets" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/button11"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="25dp" />
+        android:onClick="goToStepThree" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toilettes"
+        android:id="@+id/radioButton5"
+        android:checked="false"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nationality"
+        android:id="@+id/radioButton6"
+        android:checked="false"
+        android:layout_alignTop="@+id/radioButton5"
+        android:layout_alignStart="@+id/radioButton4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Absolutely not"
+        android:id="@+id/textView50"
+        android:layout_below="@+id/radioButton5"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimary" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sea"
+        android:id="@+id/radioButton7"
+        android:layout_below="@+id/textView50"
+        android:layout_alignStart="@+id/textView40"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playground"
+        android:id="@+id/radioButton8"
+        android:checked="false"
+        android:layout_below="@+id/radioButton7"
+        android:layout_alignStart="@+id/radioButton7" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toilettes"
+        android:id="@+id/radioButton9"
+        android:checked="false"
+        android:layout_below="@+id/radioButton8"
+        android:layout_alignStart="@+id/radioButton8" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swimming pool"
+        android:id="@+id/radioButton10"
+        android:checked="false"
+        android:layout_above="@+id/radioButton8"
+        android:layout_alignStart="@+id/radioButton6" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton11"
+        android:checked="false"
+        android:text="Pets"
+        android:layout_below="@+id/radioButton10"
+        android:layout_alignStart="@+id/radioButton10" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nationality"
+        android:id="@+id/radioButton12"
+        android:checked="true"
+        android:layout_below="@+id/radioButton11"
+        android:layout_alignEnd="@+id/editText12" />
 
 </RelativeLayout>
