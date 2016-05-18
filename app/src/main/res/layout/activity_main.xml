@@ -15,9 +15,8 @@
         android:text="@string/search_camping"
         android:id="@+id/button2"
         android:onClick="onSearchCamping"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="111dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
