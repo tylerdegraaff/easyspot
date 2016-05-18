@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AccountActivity.class);
         startActivity(intent);
     }
+
+    public void onReservations(View v){
+        Intent intent = new Intent(this, ReservationActivity.class);
+        startActivity(intent);
+    }
 }
