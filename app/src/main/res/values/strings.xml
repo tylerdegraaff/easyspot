@@ -15,6 +15,6 @@
     <string name="Start_date">Start date</string>
     <string name="End_date">End date</string>
 
-    // Buttons
+    // Buttons Bookings
     <string name="btn_next">Next</string>
 </resources>
