@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BookingGeneralActivity.class);
         startActivity(intent);
     }
+
+    public void onAccount(View v){
+        Intent intent = new Intent(this, AccountActivity.class);
+        startActivity(intent);
+    }
 }

@@ -54,8 +54,9 @@
         android:layout_height="wrap_content"
         android:text="Account"
         android:id="@+id/button3"
-        android:layout_below="@+id/button4"
-        android:layout_centerHorizontal="true" />
+        android:onClick="onAccount"
+        android:layout_below="@+id/button7"
+        android:layout_alignStart="@+id/button7" />
 
     <Button
         android:layout_width="wrap_content"
@@ -71,6 +72,14 @@
         android:text="Scan beacon"
         android:id="@+id/button5"
         android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Spot"
+        android:id="@+id/button7"
+        android:layout_below="@+id/button4"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
