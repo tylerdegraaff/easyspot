@@ -1,5 +1,6 @@
 package nl.hr.tylerdegraaff.easyspot;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,5 +18,10 @@ public class BookingMapActivity extends AppCompatActivity {
     public void SpotSelected(View view) {
         Toast toast = Toast.makeText(getApplicationContext(), R.string.spot_selected, Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public void Reservate(View v) {
+        Intent intent = new Intent(this, PayBookingActivity.class);
+        startActivity(intent);
     }
 }
