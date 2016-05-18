@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EasySpot</string>
+
+
+    // Booking
+    <string name="name">Name</string>
+    <string name="phoneNumber">Phone</string>
+    <string name="Email">E-mail</string>
+    <string name="btn_next">Next</string>
 </resources>
