@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSearchCamping(View v){
-        Intent intent = new Intent(this, BookingGeneralActivity.class);
+        Intent intent = new Intent(this, SearchCampingActivity.class);
         startActivity(intent);
     }
 
