@@ -48,6 +48,7 @@ public class BookingMapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), PayBookingActivity.class));
+                selectedPlotPopUp.dismiss();
             }
         });
     }
