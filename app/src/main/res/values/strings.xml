@@ -23,4 +23,5 @@
         <item>Medium</item>
         <item>Large</item>
     </string-array>
+    <string name="title_activity_booking_choose_plot">BookingChoosePlotActivity</string>
 </resources>
