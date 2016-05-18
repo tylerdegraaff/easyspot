@@ -17,4 +17,10 @@
 
     // Buttons Bookings
     <string name="btn_next">Next</string>
+
+    <string-array name="dropdown_plot_options">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
 </resources>

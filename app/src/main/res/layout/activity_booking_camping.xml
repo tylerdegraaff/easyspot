@@ -7,15 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity">
+    tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity"
+    android:textAlignment="textStart">
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_caravan"
+        android:id="@+id/plotOptions"
+        android:spinnerMode="dropdown"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:spinnerMode="dropdown" />
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginStart="30dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -23,10 +25,9 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/booking_start_date"
-        android:layout_below="@+id/spinner_caravan"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/Start_date" />
+        android:text="31-08-2016"
+        android:layout_above="@+id/textView8"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,8 +35,84 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/booking_end_date"
-        android:layout_below="@+id/booking_start_date"
+        android:text="06-09-2016"
+        android:layout_above="@+id/textView9"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:text="4"
+        android:layout_above="@+id/textView10"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:text="2"
+        android:layout_above="@+id/checkBox"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pets"
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Plot size"
+        android:id="@+id/textView6"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:text="@string/End_date" />
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Start date"
+        android:id="@+id/textView7"
+        android:layout_above="@+id/booking_start_date"
+        android:layout_alignStart="@+id/textView8"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="End date"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/booking_end_date"
+        android:layout_alignStart="@+id/booking_end_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Kids"
+        android:id="@+id/textView10"
+        android:layout_above="@+id/editText7"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Persons"
+        android:id="@+id/textView9"
+        android:layout_above="@+id/editText6"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -13,47 +13,34 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/name"
+        android:inputType="textPersonName|text"
         android:ems="10"
         android:id="@+id/booking_name"
+        android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:textColor="@color/abc_input_method_navigation_guard"/>
+        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:typeface="normal"
+        android:background="@color/colorSecondary"
+        android:layout_toStartOf="@+id/booking_step_next"
+        android:text="Kees" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/booking_phone"
+        android:id="@+id/booking_lastname"
         android:phoneNumber="true"
-        android:text="@string/phoneNumber"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:layout_below="@+id/booking_name"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/booking_email"
-        android:text="@string/Email"
-        android:layout_below="@+id/booking_phone"
+        android:background="@color/colorSecondary"
+        android:padding="10dp"
+        android:layout_below="@+id/textView4"
         android:layout_alignParentStart="true"
-        android:textColor="@color/abc_input_method_navigation_guard"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/booking_adress"
-        android:text="@string/Address"
-        android:layout_below="@+id/booking_email"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/abc_input_method_navigation_guard"/>
+        android:layout_alignEnd="@+id/booking_name"
+        android:text="van Camping" />
 
     <Button
         android:layout_width="wrap_content"
@@ -64,4 +51,78 @@
         android:layout_alignParentEnd="true"
         android:onClick="NextStep"
         android:background="@color/colorSecondary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Name"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lastname"
+        android:id="@+id/textView4"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/booking_name"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:text="12-01-1963"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorSecondary"
+        android:padding="10dp"
+        android:layout_toStartOf="@+id/booking_step_next" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Birth"
+        android:id="@+id/textView5"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/booking_lastname"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:text="Netherlands"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:background="@color/colorSecondary"
+        android:padding="10dp"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"
+        android:layout_alignEnd="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:text="1000 AA 11"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:background="@color/colorSecondary"
+        android:padding="10dp"
+        android:layout_marginTop="21dp"
+        android:nestedScrollingEnabled="false"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editText4" />
+
 </RelativeLayout>
