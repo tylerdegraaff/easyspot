@@ -10,15 +10,7 @@
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingMapActivity"
     android:onClick="SpotSelected"
     android:focusable="false"
-    android:background="@drawable/camping_map">
+    android:background="@drawable/camping_map"
+    android:id="@+id/mapRelativeLayout">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/button12"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/colorPrimary"
-        android:onClick="Reservate" />
 </RelativeLayout>
