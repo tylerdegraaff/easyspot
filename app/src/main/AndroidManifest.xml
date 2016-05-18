@@ -23,11 +23,6 @@
 
         <activity android:name=".CampingKaraokeActivity"></activity>
 
-        <activity
-            android:name=".BookingChoosePlotActivity"
-            android:label="@string/title_activity_booking_choose_plot"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
     </application>
 
 </manifest>
