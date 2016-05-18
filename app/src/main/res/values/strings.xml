@@ -1,4 +1,5 @@
 <resources>
+    // App General
     <string name="app_name">EasySpot</string>
 
     //Home screen btn
@@ -10,5 +11,10 @@
     <string name="name">Name</string>
     <string name="phoneNumber">Phone</string>
     <string name="Email">E-mail</string>
+    <string name="Address">Address</string>
+    <string name="Start_date">Start date</string>
+    <string name="End_date">End date</string>
+
+    // Buttons
     <string name="btn_next">Next</string>
 </resources>

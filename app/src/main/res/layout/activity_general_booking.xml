@@ -18,7 +18,8 @@
         android:ems="10"
         android:id="@+id/booking_name"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/abc_input_method_navigation_guard"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,9 +27,11 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/booking_phone"
+        android:phoneNumber="true"
+        android:text="@string/phoneNumber"
+        android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/booking_name"
-        android:layout_alignParentStart="true"
-        android:text="@string/phoneNumber" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -36,9 +39,10 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/booking_email"
+        android:text="@string/Email"
         android:layout_below="@+id/booking_phone"
         android:layout_alignParentStart="true"
-        android:text="@string/Email" />
+        android:textColor="@color/abc_input_method_navigation_guard"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -46,8 +50,10 @@
         android:inputType="textPostalAddress"
         android:ems="10"
         android:id="@+id/booking_adress"
+        android:text="@string/Address"
         android:layout_below="@+id/booking_email"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/abc_input_method_navigation_guard"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -56,7 +62,6 @@
         android:id="@+id/booking_step_next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/colorSecondary"
-        android:textColor="@color/colorPrimary"
-        android:onClick="NextStep" />
+        android:onClick="NextStep"
+        android:background="@color/colorSecondary" />
 </RelativeLayout>
