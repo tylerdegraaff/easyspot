@@ -28,4 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ReservationActivity.class);
         startActivity(intent);
     }
+
+    public void onMySpot(View v){
+        Intent intent = new Intent(this, MySpotMainActivity.class);
+        startActivity(intent);
+    }
 }

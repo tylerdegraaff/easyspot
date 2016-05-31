@@ -25,7 +25,11 @@
         <activity android:name=".SearchCampingActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".BookingKaraokeActivity" />
-        <activity android:name=".PayBookingActivity"></activity>
+        <activity android:name=".PayBookingActivity" />
+        <activity android:name=".MySpotMainActivity" />
+        <activity android:name=".MySpotProfileActivity" />
+        <activity android:name=".MySpotCommunityActivity" />
+        <activity android:name=".MySpotMapActivity"></activity>
     </application>
 
 </manifest>

@@ -15,10 +15,11 @@
         android:text="@string/search_camping"
         android:id="@+id/button2"
         android:onClick="onSearchCamping"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#fbfafa" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,6 +94,7 @@
         android:background="@color/colorPrimary"
         android:layout_below="@+id/button4"
         android:layout_alignStart="@+id/button4"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:onClick="onMySpot" />
 
 </RelativeLayout>
