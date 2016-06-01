@@ -33,7 +33,7 @@ public class BookingMapActivity extends AppCompatActivity {
         layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
         ViewGroup container = (ViewGroup)layoutInflater.inflate(R.layout.selected_plot_popup, null);
 
-        selectedPlotPopUp = new PopupWindow(container, 400, 400, true);
+        selectedPlotPopUp = new PopupWindow(container, 600, 300, true);
         selectedPlotPopUp.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
 
         TextView cancel = (TextView) container.findViewById(R.id.cancel_plot);

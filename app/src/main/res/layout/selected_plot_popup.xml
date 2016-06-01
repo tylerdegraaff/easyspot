@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/bg_popup">
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,10 +10,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Lot 47"
         android:id="@+id/textView75"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_below="@+id/textView76"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,9 +21,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="This lot matches 100% of your priorities"
         android:id="@+id/textView76"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"
-        android:textColor="#ffffff" />
+        android:layout_marginTop="23dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,8 +43,8 @@
         android:text="Book now"
         android:id="@+id/save_plot"
         android:onClick="Reservate"
+        android:layout_marginTop="19dp"
+        android:textColor="#ffffff"
         android:layout_below="@+id/textView75"
-        android:layout_toEndOf="@+id/textView75"
-        android:layout_marginTop="35dp"
-        android:textColor="#ffffff" />
+        android:layout_toEndOf="@+id/textView75" />
 </RelativeLayout>

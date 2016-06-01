@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/closeWindow2"
+            android:src="@drawable/abc_ic_clear_mtrl_alpha"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="22dp" />
+
+        <ImageView
+            android:layout_width="393dp"
+            android:layout_height="297dp"
+            android:id="@+id/imageView6"
+            android:src="@drawable/restaurant"
+            android:layout_weight="0.81"
+            android:layout_alignTop="@+id/closeWindow2"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Restaurant de Vlieg"
+            android:id="@+id/textView85"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Klik hier voor het menu"
+            android:id="@+id/textView86"
+            android:textColor="#ffffff"
+            android:textStyle="italic"
+            android:layout_alignBottom="@+id/imageView6"
+            android:layout_alignStart="@+id/textView85" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserveren"
+            android:id="@+id/button16"
+            android:background="@drawable/button_selector"
+            android:padding="10px"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/imageView6"
+            android:layout_alignStart="@+id/textView86"
+            android:layout_marginTop="20px" />
+    </RelativeLayout>
+
+</LinearLayout>
