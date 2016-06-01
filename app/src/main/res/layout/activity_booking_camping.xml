@@ -32,7 +32,8 @@
         android:id="@+id/booking_start_date"
         android:text="31-08-2016"
         android:layout_below="@+id/textView36"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
 
     <EditText
         android:layout_width="100dp"
@@ -44,7 +45,8 @@
         android:layout_below="@+id/textView37"
         android:layout_toStartOf="@+id/button11"
         android:layout_marginEnd="19dp"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +57,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:onClick="goToStepThree"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,8 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Start date"
         android:id="@+id/textView36"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:layout_below="@+id/plotOptions"
         android:layout_alignParentStart="true" />
 
@@ -74,7 +75,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="End date"
         android:id="@+id/textView37"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:layout_alignTop="@+id/textView36"
         android:layout_alignEnd="@+id/radioButton4" />
 
@@ -84,7 +85,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Persons"
         android:id="@+id/textView38"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:layout_below="@+id/booking_start_date"
         android:layout_alignEnd="@+id/textView35" />
 
@@ -94,7 +95,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Kids"
         android:id="@+id/textView39"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:layout_alignTop="@+id/textView38"
         android:layout_alignStart="@+id/textView37" />
 
@@ -107,7 +108,8 @@
         android:text="4"
         android:layout_below="@+id/textView39"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/booking_start_date" />
+        android:layout_alignEnd="@+id/booking_start_date"
+        android:textColor="#ffffff" />
 
     <EditText
         android:layout_width="50dp"
@@ -118,7 +120,8 @@
         android:text="2"
         android:layout_alignTop="@+id/editText11"
         android:layout_alignStart="@+id/booking_end_date"
-        android:layout_alignEnd="@+id/booking_end_date" />
+        android:layout_alignEnd="@+id/booking_end_date"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -127,7 +130,8 @@
         android:id="@+id/radioButton"
         android:checked="true"
         android:layout_below="@+id/textView40"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -136,7 +140,8 @@
         android:id="@+id/radioButton2"
         android:checked="false"
         android:layout_below="@+id/radioButton"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,7 +149,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Plot preferences"
         android:id="@+id/textView40"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:layout_below="@+id/editText11"
         android:layout_alignStart="@+id/textView38" />
 
@@ -155,7 +160,8 @@
         android:id="@+id/radioButton3"
         android:layout_alignBottom="@+id/radioButton"
         android:layout_alignStart="@+id/editText12"
-        android:checked="false" />
+        android:checked="false"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -164,7 +170,8 @@
         android:layout_below="@+id/radioButton3"
         android:layout_alignStart="@+id/radioButton3"
         android:checked="true"
-        android:text="Pets" />
+        android:text="Pets"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="wrap_content"
@@ -182,7 +189,8 @@
         android:id="@+id/radioButton5"
         android:checked="false"
         android:layout_below="@+id/radioButton2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -191,17 +199,19 @@
         android:id="@+id/radioButton6"
         android:checked="false"
         android:layout_alignTop="@+id/radioButton5"
-        android:layout_alignStart="@+id/radioButton4" />
+        android:layout_alignStart="@+id/radioButton4"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Absolutely not"
+        android:text="Avoid following places"
         android:id="@+id/textView50"
+        android:textColor="#000000"
         android:layout_below="@+id/radioButton5"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorPrimary" />
+        android:layout_alignStart="@+id/radioButton7"
+        android:layout_marginTop="26dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -210,7 +220,8 @@
         android:id="@+id/radioButton7"
         android:layout_below="@+id/textView50"
         android:layout_alignStart="@+id/textView40"
-        android:checked="false" />
+        android:checked="false"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -219,7 +230,8 @@
         android:id="@+id/radioButton8"
         android:checked="false"
         android:layout_below="@+id/radioButton7"
-        android:layout_alignStart="@+id/radioButton7" />
+        android:layout_alignStart="@+id/radioButton7"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -228,7 +240,8 @@
         android:id="@+id/radioButton9"
         android:checked="false"
         android:layout_below="@+id/radioButton8"
-        android:layout_alignStart="@+id/radioButton8" />
+        android:layout_alignStart="@+id/radioButton8"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -237,7 +250,8 @@
         android:id="@+id/radioButton10"
         android:checked="false"
         android:layout_above="@+id/radioButton8"
-        android:layout_alignStart="@+id/radioButton6" />
+        android:layout_alignStart="@+id/radioButton6"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -246,7 +260,8 @@
         android:checked="false"
         android:text="Pets"
         android:layout_below="@+id/radioButton10"
-        android:layout_alignStart="@+id/radioButton10" />
+        android:layout_alignStart="@+id/radioButton10"
+        android:textColor="#ffffff" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -255,6 +270,7 @@
         android:id="@+id/radioButton12"
         android:checked="true"
         android:layout_below="@+id/radioButton11"
-        android:layout_alignEnd="@+id/editText12" />
+        android:layout_alignEnd="@+id/editText12"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
