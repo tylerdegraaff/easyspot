@@ -18,11 +18,11 @@ public class MySpotMainActivity extends TabActivity {
         myTabWidget = myTabHost.getTabWidget();
 
         myTabHost.addTab(myTabHost.newTabSpec("profile")
-                .setIndicator("", getResources().getDrawable(R.drawable.community_icon))
+                .setIndicator("", getResources().getDrawable(R.drawable.profile_icon))
                 .setContent(new Intent(this, MySpotProfileActivity.class)));
 
         myTabHost.addTab(myTabHost.newTabSpec("map")
-                .setIndicator("", getResources().getDrawable(R.drawable.community_icon))
+                .setIndicator("", getResources().getDrawable(R.drawable.map_icon))
                 .setContent(new Intent(this, MySpotMapActivity.class)));
 
         myTabHost.addTab(myTabHost.newTabSpec("community")

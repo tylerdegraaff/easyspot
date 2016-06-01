@@ -41,4 +41,23 @@
         android:layout_above="@+id/save_plot"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView79"
+        android:layout_below="@+id/cancel_plot"
+        android:layout_alignStart="@+id/cancel_plot" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textView80"
+        android:layout_below="@+id/save_plot"
+        android:layout_alignEnd="@+id/textView76"
+        android:onClick="Reservate" />
 </RelativeLayout>
