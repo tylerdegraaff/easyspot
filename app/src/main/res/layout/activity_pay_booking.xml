@@ -19,7 +19,15 @@
         android:background="@drawable/button_selector"
         android:textColor="#ffffff"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD
         android:layout_alignEnd="@+id/textView62" />
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:onClick="onPay"
+        android:background="@drawable/button_selector"
+        android:textColor="#ffffff" />
+>>>>>>> 2ac77b83c44432d644018953fdf53b6ef1ef83b8
 
     <TextView
         android:layout_width="wrap_content"

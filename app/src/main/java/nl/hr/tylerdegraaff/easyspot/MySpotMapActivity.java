@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class MySpotMapActivity extends AppCompatActivity {
 
     private PopupWindow facilityPopUp;
+    private PopupWindow RestaurantPopup;
     private LayoutInflater layoutInflater;
     private RelativeLayout relativeLayout;
 
@@ -30,17 +31,35 @@ public class MySpotMapActivity extends AppCompatActivity {
     public void ClickFacility(View view) {
 
         layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-        ViewGroup container = (ViewGroup)layoutInflater.inflate(R.layout.facility_popup, null);
+        ViewGroup container1 = (ViewGroup)layoutInflater.inflate(R.layout.facility_popup, null);
 
-        facilityPopUp = new PopupWindow(container, 400, 200, false);
+        facilityPopUp = new PopupWindow(container1, 400, 200, false);
         facilityPopUp.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
 
-        ImageView closeWindow = (ImageView)container.findViewById(R.id.close_window);
+        ImageView closeWindow = (ImageView)container1.findViewById(R.id.close_window);
 
         closeWindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 facilityPopUp.dismiss();
+            }
+        });
+    }
+
+    public void ClickRestaurant(View view) {
+
+        layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+        ViewGroup container  = (ViewGroup)layoutInflater.inflate(R.layout.restaurant_popup, null);
+
+        RestaurantPopup = new PopupWindow(container, 600, 800, false);
+        RestaurantPopup.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
+
+        ImageView closeWindow = (ImageView)container.findViewById(R.id.closeWindow2);
+
+        closeWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RestaurantPopup.dismiss();
             }
         });
     }
