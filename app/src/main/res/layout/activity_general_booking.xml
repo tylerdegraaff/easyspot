@@ -178,6 +178,7 @@
         android:onClick="NextStep"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:textColor="@color/abc_input_method_navigation_guard" />
+        android:textColor="#ffffff"
+        android:background="@drawable/button_selector" />
 
 </RelativeLayout>

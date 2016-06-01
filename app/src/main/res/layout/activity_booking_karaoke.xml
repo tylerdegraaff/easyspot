@@ -14,12 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView8"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_below="@+id/textView35"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="379dp"
-        android:layout_alignParentBottom="true" />
+        android:src="@drawable/camping3"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="76dp"
+        android:layout_above="@+id/textView37"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,50 +29,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView9"
-        android:src="@drawable/arrow_right"
-        android:layout_alignEnd="@+id/imageView8"
-        android:layout_alignStart="@+id/textView35"
-        android:layout_marginStart="129dp"
-        android:layout_alignTop="@+id/imageView8"
-        android:layout_marginTop="22dp"
-        android:layout_alignBottom="@+id/imageView8"
-        android:layout_marginBottom="23dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView10"
-        android:src="@drawable/arrow_right"
-        android:layout_alignParentStart="true"
-        android:scaleX="-1"
-        android:layout_alignEnd="@+id/textView35"
-        android:layout_marginEnd="132dp"
-        android:layout_alignBottom="@+id/imageView9"
-        android:layout_alignTop="@+id/imageView9" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_book_now"
         android:id="@+id/button11"
+        android:onClick="bookNow"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_selector"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
-        android:onClick="bookNow" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Info"
-        android:id="@+id/textView36"
-        android:layout_below="@+id/imageView9"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,35 +46,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="On this camping there is room for everyone! It doesnt matter if you have kids or if there animals that you bring with you. We always have a nice spot for you. Also there is a lot of activities to do for the kids and there is swimmingool available for everyone."
         android:id="@+id/textView37"
-        android:layout_below="@+id/textView36"
-        android:layout_alignEnd="@+id/imageView8"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="148dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp"
+        android:textColor="#ffffff"
         android:layout_above="@+id/button11"
-        android:textColor="#ffffff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Cost"
-        android:id="@+id/textView38"
-        android:layout_alignTop="@+id/textView37"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="115dp"
-        android:textColor="#000000" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Lot: 80eu p.n."
-        android:id="@+id/textView39"
-        android:layout_below="@+id/textView38"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20px" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -117,9 +57,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Medium Lot: 120eu p.n."
         android:id="@+id/textView40"
-        android:layout_below="@+id/textView39"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/textView84"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -127,8 +68,27 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Large Lot: 180eu p.n."
         android:id="@+id/textView50"
+        android:textColor="#ffffff"
         android:layout_below="@+id/textView40"
-        android:layout_alignStart="@+id/textView39"
-        android:textColor="#ffffff" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Lot: 80eu p.n"
+        android:id="@+id/textView84"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/textView37"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="56dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/map_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
