@@ -18,4 +18,8 @@ public class SettingsActivity extends AppCompatActivity {
     {
         startActivity(new Intent(getApplicationContext(), AccountActivity.class));
     }
+
+    public void LogOut(View view) {
+        this.finishAffinity();
+    }
 }

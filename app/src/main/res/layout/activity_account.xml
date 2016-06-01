@@ -222,7 +222,9 @@
         android:id="@+id/button6"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:onClick="onSave" />
+        android:onClick="onSave"
+        android:background="@drawable/button_selector"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
 </ScrollView>

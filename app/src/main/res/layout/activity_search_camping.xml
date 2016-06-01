@@ -8,15 +8,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.SearchCampingActivity"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/background">
 
     <EditText
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/editText15"
-        android:foreground="@drawable/abc_ic_search_api_mtrl_alpha"
-        android:foregroundGravity="left|center_vertical"
-        android:foregroundTintMode="src_in"
+        android:foregroundGravity="center_vertical"
         android:text="search on place or camping"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -25,13 +23,13 @@
         android:layout_alignParentStart="true" />
 
     <ImageView
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/imageView2"
-        android:src="@android:drawable/ic_menu_gallery"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/editText15"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:src="@drawable/camping1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,11 +51,11 @@
         android:textColor="#000000" />
 
     <ImageView
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/imageView3"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_below="@+id/imageView2"
+        android:src="@drawable/camping2"
+        android:layout_alignTop="@+id/textView53"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -66,26 +64,27 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Camping Holland"
         android:id="@+id/textView53"
+        android:textColor="#ffffff"
         android:layout_below="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2"
-        android:textColor="#ffffff" />
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_marginTop="28dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="France, Nice"
         android:id="@+id/textView54"
+        android:textColor="#000000"
         android:layout_below="@+id/textView53"
-        android:layout_toEndOf="@+id/imageView3"
-        android:textColor="#000000" />
+        android:layout_toEndOf="@+id/imageView4" />
 
     <ImageView
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/imageView4"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentStart="true" />
+        android:src="@drawable/camping3"
+        android:layout_alignTop="@+id/textView55"
+        android:layout_toStartOf="@+id/textView55" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,43 +92,49 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Camping Karoake"
         android:id="@+id/textView55"
-        android:layout_below="@+id/imageView3"
-        android:layout_toEndOf="@+id/imageView4"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/textView51" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="France, Marseille"
         android:id="@+id/textView56"
+        android:textColor="#000000"
         android:layout_below="@+id/textView55"
-        android:layout_toEndOf="@+id/imageView4"
-        android:textColor="#000000" />
+        android:layout_toEndOf="@+id/imageView4" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/imageView5"
-        android:src="@drawable/arrow_right"
-        android:layout_marginStart="38dp"
-        android:layout_alignTop="@+id/textView51"
-        android:layout_toEndOf="@+id/textView51" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="See more"
+        android:id="@+id/textView80"
+        android:layout_alignTop="@+id/textView52"
+        android:layout_alignEnd="@+id/editText15"
+        android:layout_marginEnd="38dp"
+        android:textColor="@color/colorButton" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/imageView6"
-        android:src="@drawable/arrow_right"
-        android:layout_alignTop="@+id/textView53"
-        android:layout_alignStart="@+id/imageView5" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="See more"
+        android:id="@+id/textView82"
+        android:layout_alignBottom="@+id/textView54"
+        android:layout_alignStart="@+id/textView80"
+        android:textColor="@color/colorButton" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/imageView7"
-        android:src="@drawable/arrow_right"
-        android:layout_alignTop="@+id/textView55"
-        android:layout_alignStart="@+id/imageView6"
-        android:onClick="Reservate" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="See more"
+        android:id="@+id/textView83"
+        android:layout_alignBottom="@+id/textView56"
+        android:layout_alignStart="@+id/textView82"
+        android:onClick="Reservate"
+        android:textColor="@color/colorButton" />
 
 </RelativeLayout>
