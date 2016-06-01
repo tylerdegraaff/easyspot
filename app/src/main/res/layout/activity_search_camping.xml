@@ -114,7 +114,7 @@
         android:layout_alignTop="@+id/textView52"
         android:layout_alignEnd="@+id/editText15"
         android:layout_marginEnd="38dp"
-        android:textColor="@color/colorButton" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
         android:id="@+id/textView82"
         android:layout_alignBottom="@+id/textView54"
         android:layout_alignStart="@+id/textView80"
-        android:textColor="@color/colorButton" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -135,6 +135,6 @@
         android:layout_alignBottom="@+id/textView56"
         android:layout_alignStart="@+id/textView82"
         android:onClick="Reservate"
-        android:textColor="@color/colorButton" />
+        android:textColor="#000000" />
 
 </RelativeLayout>

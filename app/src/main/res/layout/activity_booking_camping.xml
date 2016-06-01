@@ -10,7 +10,7 @@
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity"
     android:textAlignment="textStart"
     android:gravity="start"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/background">
 
     <Spinner
         android:layout_width="120dp"
@@ -33,7 +33,7 @@
         android:text="31-08-2016"
         android:layout_below="@+id/textView36"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="100dp"
@@ -46,7 +46,7 @@
         android:layout_toStartOf="@+id/button11"
         android:layout_marginEnd="19dp"
         android:textIsSelectable="false"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:onClick="goToStepThree"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Start date"
         android:id="@+id/textView36"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_below="@+id/plotOptions"
         android:layout_alignParentStart="true" />
 
@@ -75,7 +75,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="End date"
         android:id="@+id/textView37"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_alignTop="@+id/textView36"
         android:layout_alignEnd="@+id/radioButton4" />
 
@@ -85,7 +85,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Persons"
         android:id="@+id/textView38"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_below="@+id/booking_start_date"
         android:layout_alignEnd="@+id/textView35" />
 
@@ -95,7 +95,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Kids"
         android:id="@+id/textView39"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_alignTop="@+id/textView38"
         android:layout_alignStart="@+id/textView37" />
 
@@ -109,7 +109,7 @@
         android:layout_below="@+id/textView39"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/booking_start_date"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="50dp"
@@ -121,7 +121,7 @@
         android:layout_alignTop="@+id/editText11"
         android:layout_alignStart="@+id/booking_end_date"
         android:layout_alignEnd="@+id/booking_end_date"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
         android:checked="true"
         android:layout_below="@+id/textView40"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
         android:checked="false"
         android:layout_below="@+id/radioButton"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Plot preferences"
         android:id="@+id/textView40"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_below="@+id/editText11"
         android:layout_alignStart="@+id/textView38" />
 
@@ -161,7 +161,7 @@
         android:layout_alignBottom="@+id/radioButton"
         android:layout_alignStart="@+id/editText12"
         android:checked="false"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
         android:layout_alignStart="@+id/radioButton3"
         android:checked="true"
         android:text="Pets"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <Button
         android:layout_width="wrap_content"
@@ -182,7 +182,8 @@
         android:layout_alignParentEnd="true"
         android:onClick="goToStepThree"
         android:background="@drawable/button_selector"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/radioButton12" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -192,7 +193,7 @@
         android:checked="false"
         android:layout_below="@+id/radioButton2"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -202,7 +203,7 @@
         android:checked="false"
         android:layout_alignTop="@+id/radioButton5"
         android:layout_alignStart="@+id/radioButton4"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -210,10 +211,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Avoid following places"
         android:id="@+id/textView50"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:layout_below="@+id/radioButton5"
         android:layout_alignStart="@+id/radioButton7"
-        android:layout_marginTop="26dp" />
+        android:layout_marginTop="26dp"
+        android:textSize="17dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -223,7 +225,7 @@
         android:layout_below="@+id/textView50"
         android:layout_alignStart="@+id/textView40"
         android:checked="false"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -233,7 +235,7 @@
         android:checked="false"
         android:layout_below="@+id/radioButton7"
         android:layout_alignStart="@+id/radioButton7"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -243,7 +245,7 @@
         android:checked="false"
         android:layout_below="@+id/radioButton8"
         android:layout_alignStart="@+id/radioButton8"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -253,7 +255,7 @@
         android:checked="false"
         android:layout_above="@+id/radioButton8"
         android:layout_alignStart="@+id/radioButton6"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -263,7 +265,7 @@
         android:text="Pets"
         android:layout_below="@+id/radioButton10"
         android:layout_alignStart="@+id/radioButton10"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -273,6 +275,6 @@
         android:checked="true"
         android:layout_below="@+id/radioButton11"
         android:layout_alignEnd="@+id/editText12"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
 </RelativeLayout>

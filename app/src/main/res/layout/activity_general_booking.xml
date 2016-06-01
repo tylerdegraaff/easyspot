@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".BookingGeneralActivity"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/background">
 
     <EditText
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
         android:inputType="textPersonName|text"
         android:ems="10"
         android:id="@+id/booking_name"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:padding="10dp"
         android:singleLine="true"
         android:typeface="normal"
@@ -37,7 +37,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
         android:layout_alignEnd="@+id/booking_name"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
         android:ems="10"
         android:id="@+id/editText3"
         android:text="12-01-1963"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:padding="10dp"
         android:layout_below="@+id/textView45"
         android:layout_alignParentStart="true"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText4"
         android:text="Netherlands"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:padding="10dp"
         android:layout_below="@+id/textView46"
         android:layout_alignParentStart="true"
@@ -70,7 +70,7 @@
         android:ems="10"
         android:id="@+id/editText5"
         android:text="1000 AA 11"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:padding="10dp"
         android:nestedScrollingEnabled="false"
         android:layout_below="@+id/textView47"
@@ -85,7 +85,7 @@
         android:id="@+id/textView43"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
         android:id="@+id/textView44"
         android:layout_below="@+id/booking_name"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
         android:id="@+id/textView45"
         android:layout_below="@+id/booking_lastname"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
         android:id="@+id/textView46"
         android:layout_below="@+id/editText3"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
         android:id="@+id/textView47"
         android:layout_below="@+id/editText4"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
         android:id="@+id/textView48"
         android:layout_below="@+id/editText5"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
         android:id="@+id/editText13"
         android:layout_below="@+id/textView48"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:text="keesvancamping@gmail.com"
         android:layout_alignEnd="@+id/editText5" />
 
@@ -157,7 +157,7 @@
         android:id="@+id/textView49"
         android:layout_below="@+id/editText13"
         android:layout_alignParentStart="true"
-        android:textColor="#000000" />
+        android:textColor="#ffffff" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -168,7 +168,7 @@
         android:layout_below="@+id/textView49"
         android:layout_alignParentStart="true"
         android:text="0657192402"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <Button
         android:layout_width="wrap_content"
