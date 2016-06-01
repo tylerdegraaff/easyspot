@@ -5,11 +5,12 @@
             <solid android:color="@color/colorPrimary"/>
             <gradient
                 android:startColor="#FCFFC1"
+                android:centerColor="@color/colorPrimary"
                 android:endColor="@color/colorSecondary"
-                android:centerX="80%"
-                android:centerY="50%"
+                android:centerX="60%"
+                android:centerY="40%"
                 android:type="linear"
-                android:angle="270"
+                android:angle="90"
                 android:gradientRadius="10dp" />
         </shape>
     </item>

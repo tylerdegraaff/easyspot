@@ -17,9 +17,17 @@ public class MySpotMainActivity extends TabActivity {
         TabHost myTabHost = getTabHost();
         myTabWidget = myTabHost.getTabWidget();
 
-        myTabHost.addTab(myTabHost.newTabSpec("profile").setIndicator("Profile").setContent(new Intent(this, MySpotProfileActivity.class)));
-        myTabHost.addTab(myTabHost.newTabSpec("map").setIndicator("Map").setContent(new Intent(this, MySpotMapActivity.class)));
-        myTabHost.addTab(myTabHost.newTabSpec("community").setIndicator("Community").setContent(new Intent(this, MySpotCommunityActivity.class)));
+        myTabHost.addTab(myTabHost.newTabSpec("profile")
+                .setIndicator("", getResources().getDrawable(R.drawable.community_icon))
+                .setContent(new Intent(this, MySpotProfileActivity.class)));
+
+        myTabHost.addTab(myTabHost.newTabSpec("map")
+                .setIndicator("", getResources().getDrawable(R.drawable.community_icon))
+                .setContent(new Intent(this, MySpotMapActivity.class)));
+
+        myTabHost.addTab(myTabHost.newTabSpec("community")
+                .setIndicator("", getResources().getDrawable(R.drawable.community_icon))
+                .setContent(new Intent(this, MySpotCommunityActivity.class)));
 
         changeTabs();
     }
