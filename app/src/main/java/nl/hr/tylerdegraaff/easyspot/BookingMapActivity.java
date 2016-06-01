@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class BookingMapActivity extends AppCompatActivity {
@@ -35,8 +36,8 @@ public class BookingMapActivity extends AppCompatActivity {
         selectedPlotPopUp = new PopupWindow(container, 400, 400, true);
         selectedPlotPopUp.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
 
-        Button cancel = (Button) container.findViewById(R.id.cancel_plot);
-        Button save = (Button) container.findViewById(R.id.save_plot);
+        TextView cancel = (TextView) container.findViewById(R.id.cancel_plot);
+        TextView save = (TextView) container.findViewById(R.id.save_plot);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

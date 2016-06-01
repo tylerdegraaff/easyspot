@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.ReservationActivity"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +17,8 @@
         android:text="Holland Camping"
         android:id="@+id/textView14"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         android:text="26 Aug till 30 Aug"
         android:id="@+id/textView15"
         android:layout_below="@+id/textView14"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -34,7 +36,9 @@
         android:text="More info"
         android:id="@+id/button8"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_selector" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +48,8 @@
         android:id="@+id/textView16"
         android:layout_below="@+id/button8"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="34dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,7 +58,8 @@
         android:text="26 Aug till 6 Sep"
         android:id="@+id/textView17"
         android:layout_below="@+id/textView16"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -62,6 +68,8 @@
         android:id="@+id/button9"
         android:layout_alignBottom="@+id/textView17"
         android:layout_alignParentEnd="true"
-        android:onClick="onCampingKaraoke" />
+        android:onClick="onCampingKaraoke"
+        android:background="@drawable/button_selector"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

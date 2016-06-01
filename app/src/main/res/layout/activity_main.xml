@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorSecondary">
+    android:background="@drawable/bg_login">
 
     <Button
         android:layout_width="150dp"
@@ -18,7 +18,8 @@
         android:background="@drawable/button_selector"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,7 +27,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Welcome Kees!"
         android:id="@+id/textView3"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -35,13 +36,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/circleman"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginEnd="103dp"
         android:layout_below="@+id/textView3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="54dp"
+        android:layout_alignEnd="@+id/button2"
         android:layout_above="@+id/button2"
-        android:layout_marginTop="10dp" />
+        android:layout_alignStart="@+id/button2"
+        android:paddingTop="25px" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,10 +48,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Only 112 days left for your vacation!"
         android:id="@+id/textView4"
-        android:layout_marginBottom="25dp"
-        android:layout_above="@+id/button2"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorPrimary" />
+        android:paddingTop="10px" />
 
     <Button
         android:layout_width="150dp"
@@ -62,7 +61,8 @@
         android:onClick="onAccount"
         android:background="@drawable/button_selector"
         android:layout_below="@+id/button7"
-        android:layout_alignStart="@+id/button7" />
+        android:layout_alignStart="@+id/button7"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="150dp"
@@ -73,7 +73,8 @@
         android:background="@drawable/button_selector"
         android:layout_below="@+id/button5"
         android:layout_alignStart="@+id/button5"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="150dp"
@@ -83,7 +84,8 @@
         android:background="@drawable/button_selector"
         android:layout_below="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="150dp"
@@ -94,6 +96,7 @@
         android:layout_below="@+id/button4"
         android:layout_alignStart="@+id/button4"
         android:layout_marginBottom="10dp"
-        android:onClick="onMySpot" />
+        android:onClick="onMySpot"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

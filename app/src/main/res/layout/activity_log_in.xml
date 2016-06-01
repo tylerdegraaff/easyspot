@@ -52,7 +52,7 @@
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
-        android:background="@color/colorButton"
+        android:background="@drawable/button_selector"
         android:textColor="#ffffff" />
 
     <TextView
