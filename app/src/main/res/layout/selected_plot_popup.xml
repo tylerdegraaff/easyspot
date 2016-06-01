@@ -19,18 +19,26 @@
         android:layout_height="wrap_content"
         android:text="Cancel"
         android:id="@+id/cancel_plot"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="64dp"
         android:layout_below="@+id/textView75"
-        android:layout_alignEnd="@+id/textView75"
-        android:layout_marginEnd="25dp" />
+        android:layout_toStartOf="@+id/textView75" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Book now"
         android:id="@+id/save_plot"
         android:onClick="Reservate"
         android:layout_alignTop="@+id/cancel_plot"
-        android:layout_alignStart="@+id/textView75"
-        android:layout_marginStart="24dp" />
+        android:layout_toEndOf="@+id/textView75" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="This lot matches 100% of your priorities"
+        android:id="@+id/textView76"
+        android:layout_above="@+id/save_plot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
 </RelativeLayout>
