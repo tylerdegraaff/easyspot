@@ -2,11 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@drawable/background">
-=======
     android:background="@drawable/bg_popup">
->>>>>>> 2ac77b83c44432d644018953fdf53b6ef1ef83b8
 
     <TextView
         android:layout_width="wrap_content"
