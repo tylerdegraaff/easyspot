@@ -15,7 +15,7 @@ public class BookingKaraokeActivity extends AppCompatActivity {
     }
 
     public void bookNow(View v) {
-        Intent intent = new Intent(this, BookingGeneralActivity.class);
+        Intent intent = new Intent(this, FransBauerEvent.class);
         startActivity(intent);
     }
 }

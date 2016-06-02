@@ -48,18 +48,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="11-07-2016 Clown Event"
+        android:text="13-07-2016 Karoke night with Frans Bauer!"
         android:id="@+id/textView89"
         android:textColor="#ffffff"
         android:layout_below="@+id/textView88"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:layout_alignEnd="@+id/textView88" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="For the little buds we have organized a fun event with alot of clowns!"
+        android:text="For the big fans we will sing the biggest hits with the almighty Frans!"
         android:id="@+id/textView90"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
@@ -76,13 +77,14 @@
         android:textColor="#ffffff"
         android:layout_alignBottom="@+id/textView90"
         android:layout_alignStart="@+id/button17"
-        android:layout_below="@+id/textView89" />
+        android:layout_below="@+id/textView89"
+        android:onClick="seeDetailFrans" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="11-07-2016 Clown Event"
+        android:text="18-07-2016 Beer fest"
         android:id="@+id/textView91"
         android:textColor="#ffffff"
         android:layout_marginTop="27dp"
@@ -93,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="For the little buds we have organized a fun event with alot of clowns!"
+        android:text="The title says it all... just bitterballen with beer."
         android:id="@+id/textView92"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
