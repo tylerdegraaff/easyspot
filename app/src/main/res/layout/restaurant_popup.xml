@@ -16,10 +16,10 @@
             android:id="@+id/closeWindow2"
             android:src="@drawable/abc_ic_clear_mtrl_alpha"
             android:layout_gravity="right"
+            android:layout_marginTop="23dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="22dp"
-            android:layout_marginTop="22dp" />
+            android:layout_toEndOf="@+id/textView86"
+            android:layout_marginStart="23dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,16 +30,9 @@
             android:textColor="#ffffff"
             android:textStyle="italic"
             android:layout_gravity="center"
-            android:layout_below="@+id/imageView6"
-            android:layout_alignStart="@+id/imageView6" />
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="220dp"
-            android:id="@+id/imageView6"
-            android:src="@drawable/restaurant"
-            android:layout_below="@+id/closeWindow2"
-            android:layout_alignParentEnd="true" />
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/textView85"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,7 +42,7 @@
             android:id="@+id/textView85"
             android:textColor="#ffffff"
             android:layout_alignBottom="@+id/closeWindow2"
-            android:layout_alignStart="@+id/imageView6" />
+            android:layout_toStartOf="@+id/closeWindow2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,10 +50,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Reservate"
             android:id="@+id/textView87"
-            android:layout_below="@+id/imageView6"
-            android:layout_alignEnd="@+id/closeWindow2"
             android:textColor="@color/colorButton"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/textView86"
+            android:layout_alignEnd="@+id/textView85"
+            android:layout_marginEnd="36dp" />
     </RelativeLayout>
 
 </LinearLayout>
