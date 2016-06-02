@@ -51,7 +51,7 @@ public class MySpotMapActivity extends AppCompatActivity {
         layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
         ViewGroup container  = (ViewGroup)layoutInflater.inflate(R.layout.restaurant_popup, null);
 
-        RestaurantPopup = new PopupWindow(container, 600, 800, false);
+        RestaurantPopup = new PopupWindow(container, 600, 700, false);
         RestaurantPopup.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
 
         ImageView closeWindow = (ImageView)container.findViewById(R.id.closeWindow2);
