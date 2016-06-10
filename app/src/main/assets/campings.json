@@ -1,0 +1,24 @@
+{
+  "campings": [
+    {
+      "id": "1",
+      "name": "Camping Blue Sea",
+      "country": "France",
+      "city": "Montpellier"
+    },
+    {
+      "id": "2",
+      "name": "Camping Holland",
+      "country": "France",
+      "city": "Nice"
+
+    },
+    {
+      "id": "3",
+      "name": "Camping Karaoke ",
+      "country": "France",
+      "city": "Marseille"
+
+    },
+  ]
+}

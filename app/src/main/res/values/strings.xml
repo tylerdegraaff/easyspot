@@ -25,5 +25,6 @@
         <item>Medium</item>
         <item>Large</item>
     </string-array>
+    <string name="title_activity_registration">RegistrationActivity</string>
 
 </resources>

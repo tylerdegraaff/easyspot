@@ -15,8 +15,11 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
     }
 
-    public void onLogin(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    public void onLogin(View view){
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
+    public void SignUp(View view){
+        startActivity(new Intent(this, RegistrationActivity.class));
     }
 }

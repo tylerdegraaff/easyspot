@@ -37,7 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FransBauerEvent"></activity>
+        <activity android:name=".FransBauerEvent" />
+        <activity android:name=".RegistrationActivity"></activity>
     </application>
 
 </manifest>
