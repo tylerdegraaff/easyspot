@@ -22,21 +22,25 @@ public class TestActivity extends AppCompatActivity {
 
         ArrayList<String> campingNameList;
 
+        db.addCamping(new Camping(1, "Karaoke", "Adress", "luchtballon"));
+        db.addCamping(new Camping(2, "Biervat", "Straatnaam", "vliegtuig"));
+        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", "helicopter"));
         // Get the reference of ListViewAnimals
         ListView campingList=(ListView)findViewById(R.id.listViewCampings);
-
         campingNameList = new ArrayList<String>();
         for (Camping camping : campings) {
             // Log for debug use
-            String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
-
+            String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress() + " ,Image: " + camping.getImage();
+            Log.d("------", log + "------");
             // Getting the name and adress
             String name = camping.getName();
             String adress = camping.getAddress();
+            String image = camping.getImage();
 
             // Add the camping to the list
             campingNameList.add("Camping naam:" + name);
             campingNameList.add("Camping adress:" + adress);
+            campingNameList.add("Camping image:" + image);
         }
 
         // Create The Adapter with passing ArrayList as 3rd parameter
