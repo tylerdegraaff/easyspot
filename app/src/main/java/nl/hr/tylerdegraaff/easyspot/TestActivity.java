@@ -15,17 +15,17 @@ public class TestActivity extends AppCompatActivity {
 
         // Inserting Shop/Rows
         Log.d("Insert: ", "Inserting ..");
-        db.addShop(new Shop(1, "Camping 1", "Campingweg 23"));
-        db.addShop(new Shop(2, "Camping 2", "Wegweg"));
-        db.addShop(new Shop(3, "Camping 3", "Straatstraat"));
-        db.addShop(new Shop(4, "Camping 4", "Megastraat"));
+        db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23"));
+        db.addCamping(new Camping(2, "Camping Arno", "Wegweg"));
+        db.addCamping(new Camping(3, "Camping Damian", "Straatstraat"));
+        db.addCamping(new Camping(4, "Camping Chesney", "Megastraat"));
 
         // Reading all shops
         Log.d("Reading: ", "Reading all reservations..");
-        List<Shop> shops = db.getAllShops();
+        List<Camping> campings = db.getAllCampings();
 
-        for (Shop shop : shops) {
-            String log = "Id: " + shop.getId() + " ,Name: " + shop.getName() + " ,Address: " + shop.getAddress();
+        for (Camping camping : campings) {
+            String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
             // Writing shops to log
             Log.d("Shop: : ", log);
         }

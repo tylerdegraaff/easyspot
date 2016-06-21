@@ -15,20 +15,20 @@ public class DBHandler extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "reservations";
+    private static final String DATABASE_NAME = "campings";
     // Contacts table name
-    private static final String TABLE_RESERVATIONS = "reservations";
-    // Shops Table Columns names
+    private static final String TABLE_CAMPINGS = "campings";
+    // Campings Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
-    private static final String KEY_RE_ADDR = "reservation_adress";
+    private static final String KEY_RE_ADDR = "camping_adress";
 
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_RESERVATIONS + "("
+        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_CAMPINGS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
                 + KEY_RE_ADDR + " TEXT" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
@@ -36,42 +36,42 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_RESERVATIONS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CAMPINGS);
         // Creating tables again
         onCreate(db);
     }
-    // Adding new shop
-    public void addShop(Shop shop) {
+    // Adding new camping
+    public void addCamping(Camping camping) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, shop.getName()); // Shop Name
-        values.put(KEY_RE_ADDR, shop.getAddress()); // Shop Phone Number
+        values.put(KEY_NAME, camping.getName()); // Camping Name
+        values.put(KEY_RE_ADDR, camping.getAddress()); // Camping Phone Number
 
         // Inserting Row
-        db.insert(TABLE_RESERVATIONS, null, values);
+        db.insert(TABLE_CAMPINGS, null, values);
         db.close(); // Closing database connection
     }
-    // Getting one shop
-    public Shop getShop(int id) {
+    // Getting one camping
+    public Camping getCamping(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(TABLE_RESERVATIONS, new String[]{KEY_ID,
+        Cursor cursor = db.query(TABLE_CAMPINGS, new String[]{KEY_ID,
                         KEY_NAME, KEY_RE_ADDR}, KEY_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
 
-        Shop contact = new Shop(Integer.parseInt(cursor.getString(0)),
+        Camping contact = new Camping(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2));
-        // return shop
+        // return camping
         return contact;
     }
-    // Getting All Shops
-    public List<Shop> getAllShops() {
-        List<Shop> shopList = new ArrayList<Shop>();
+    // Getting All Campings
+    public List<Camping> getAllCampings() {
+        List<Camping> campingList = new ArrayList<Camping>();
         // Select All Query
-        String selectQuery = "SELECT * FROM " + TABLE_RESERVATIONS;
+        String selectQuery = "SELECT * FROM " + TABLE_CAMPINGS;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -79,45 +79,45 @@ public class DBHandler extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Shop shop = new Shop();
-                shop.setId(Integer.parseInt(cursor.getString(0)));
-                shop.setName(cursor.getString(1));
-                shop.setAddress(cursor.getString(2));
+                Camping camping = new Camping();
+                camping.setId(Integer.parseInt(cursor.getString(0)));
+                camping.setName(cursor.getString(1));
+                camping.setAddress(cursor.getString(2));
                 // Adding contact to list
-                shopList.add(shop);
+                campingList.add(camping);
             } while (cursor.moveToNext());
         }
 
         // return contact list
-        return shopList;
+        return campingList;
     }
-    // Getting shops Count
-    public int getShopsCount() {
-        String countQuery = "SELECT * FROM " + TABLE_RESERVATIONS;
+    // Getting campings Count
+    public int getCampingsCount() {
+        String countQuery = "SELECT * FROM " + TABLE_CAMPINGS;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
         cursor.close();
         // return count
         return cursor.getCount();
     }
-    // Updating a shop
-    public int updateShop(Shop shop) {
+    // Updating a camping
+    public int updateCamping(Camping camping) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, shop.getName());
-        values.put(KEY_RE_ADDR, shop.getAddress());
+        values.put(KEY_NAME, camping.getName());
+        values.put(KEY_RE_ADDR, camping.getAddress());
 
         // updating row
-        return db.update(TABLE_RESERVATIONS, values, KEY_ID + " = ?",
-                new String[]{String.valueOf(shop.getId())});
+        return db.update(TABLE_CAMPINGS, values, KEY_ID + " = ?",
+                new String[]{String.valueOf(camping.getId())});
     }
 
-    // Deleting a shop
-    public void deleteShop(Shop shop) {
+    // Deleting a camping
+    public void deleteCamping(Camping camping) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_RESERVATIONS, KEY_ID + " = ?",
-                new String[] { String.valueOf(shop.getId()) });
+        db.delete(TABLE_CAMPINGS, KEY_ID + " = ?",
+                new String[] { String.valueOf(camping.getId()) });
         db.close();
     }
 }
