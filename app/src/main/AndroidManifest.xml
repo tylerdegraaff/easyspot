@@ -23,6 +23,7 @@
         <activity android:name=".CampingKaraokeActivity" />
         <activity android:name=".BookingMapActivity" />
         <activity android:name=".SearchCampingActivity" />
+        <activity android:name=".TestActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".BookingKaraokeActivity" />
         <activity android:name=".PayBookingActivity" />
