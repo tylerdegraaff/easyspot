@@ -1,8 +1,14 @@
 package nl.hr.tylerdegraaff.easyspot;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class TestActivity extends AppCompatActivity {
@@ -12,22 +18,31 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         DBHandler db = new DBHandler(this);
+        ArrayList<Camping> campings = db.getAllCampings();
 
-        // Inserting Shop/Rows
-        Log.d("Insert: ", "Inserting ..");
-        db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23"));
-        db.addCamping(new Camping(2, "Camping Arno", "Wegweg"));
-        db.addCamping(new Camping(3, "Camping Damian", "Straatstraat"));
-        db.addCamping(new Camping(4, "Camping Chesney", "Megastraat"));
+        ArrayList<String> campingNameList;
 
-        // Reading all shops
-        Log.d("Reading: ", "Reading all reservations..");
-        List<Camping> campings = db.getAllCampings();
+        // Get the reference of ListViewAnimals
+        ListView campingList=(ListView)findViewById(R.id.listViewCampings);
 
+        campingNameList = new ArrayList<String>();
         for (Camping camping : campings) {
+            // Log for debug use
             String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
-            // Writing shops to log
-            Log.d("Shop: : ", log);
+
+            // Getting the name and adress
+            String name = camping.getName();
+            String adress = camping.getAddress();
+
+            // Add the camping to the list
+            campingNameList.add("Camping naam:" + name);
+            campingNameList.add("Camping adress:" + adress);
         }
+
+        // Create The Adapter with passing ArrayList as 3rd parameter
+        ArrayAdapter<String> arrayAdapter =
+                new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, campingNameList);
+        // Set The Adapter
+        campingList.setAdapter(arrayAdapter);
     }
 }
