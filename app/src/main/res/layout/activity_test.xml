@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="nl.hr.tylerdegraaff.easyspot.TestActivity">
+    tools:context="nl.hr.tylerdegraaff.easyspot.TestActivity"
+    android:background="@drawable/background">
 
     <ListView
         android:layout_width="wrap_content"
@@ -15,5 +16,5 @@
         android:id="@+id/listViewCampings"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        tools:listitem="@android:layout/simple_list_item_1" />
+        android:choiceMode="none" />
 </RelativeLayout>
