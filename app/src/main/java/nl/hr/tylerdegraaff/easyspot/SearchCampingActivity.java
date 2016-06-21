@@ -28,7 +28,7 @@ public class SearchCampingActivity extends AppCompatActivity {
         db = new DBHandler(this);
         campings = db.getAllCampings();
 
-        db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23",));
+        db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23", R.drawable.camping1));
         createListView();
         registerClickCallback();
     }

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DBHandler extends SQLiteOpenHelper {
     // Database Version
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
     // Database Name
     private static final String DATABASE_NAME = "campings";
     // Contacts table name
@@ -31,7 +31,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_CAMPINGS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_RE_ADDR + " TEXT," + KEY_IMAGE_ADDR + " TEXT" + ")";
+                + KEY_RE_ADDR + " TEXT," + KEY_IMAGE_ADDR + " INTEGER" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
     @Override
@@ -48,7 +48,7 @@ public class DBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, camping.getName()); // Camping Name
         values.put(KEY_RE_ADDR, camping.getAddress()); // Camping Adress
-        values.put(KEY_IMAGE_ADDR, camping.getImage()); // Camping Image
+        values.put(KEY_IMAGE_ADDR, camping.getImage()); // Camping Image Int
 
         // Inserting Row
         db.insert(TABLE_CAMPINGS, null, values);
@@ -65,7 +65,7 @@ public class DBHandler extends SQLiteOpenHelper {
             cursor.moveToFirst();
 
         Camping contact = new Camping(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), cursor.getString(3));
+                cursor.getString(1), cursor.getString(2), Integer.parseInt(cursor.getString(3)));
         // return camping
         return contact;
     }
@@ -85,7 +85,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 camping.setId(Integer.parseInt(cursor.getString(0)));
                 camping.setName(cursor.getString(1));
                 camping.setAddress(cursor.getString(2));
-                camping.setImage(cursor.getString(3));
+                camping.setImage(Integer.parseInt(cursor.getString(3)));
                 // Adding contact to list
                 campingList.add(camping);
             } while (cursor.moveToNext());

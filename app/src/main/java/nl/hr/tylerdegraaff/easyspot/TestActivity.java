@@ -22,10 +22,10 @@ public class TestActivity extends AppCompatActivity {
 
         ArrayList<String> campingNameList;
 
-        db.addCamping(new Camping(1, "fdfsfsd", "Adress", "luchtballon"));
-        db.addCamping(new Camping(2, "Biervat", "Straatnaam", "vliegtuig"));
-        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", "helicopter"));
-        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", "helicopter"));
+        db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1));
+        db.addCamping(new Camping(2, "Biervat", "Straatnaam", 2));
+        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", 3));
+        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", 4));
 
         // Get the reference of ListViewAnimals
         ListView campingList=(ListView)findViewById(R.id.listViewCampings);
@@ -37,12 +37,12 @@ public class TestActivity extends AppCompatActivity {
             // Getting the name and adress
             String name = camping.getName();
             String adress = camping.getAddress();
-            String image = camping.getImage();
+            Integer image = camping.getImage();
 
             // Add the camping to the list
             campingNameList.add("Camping naam:" + name);
             campingNameList.add("Camping adress:" + adress);
-            campingNameList.add("Camping image:" + image);
+            campingNameList.add("Camping test image:" + image);
         }
 
         // Create The Adapter with passing ArrayList as 3rd parameter
