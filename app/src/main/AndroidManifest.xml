@@ -38,7 +38,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FransBauerEvent" />
-        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
