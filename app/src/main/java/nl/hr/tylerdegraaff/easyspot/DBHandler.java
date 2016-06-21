@@ -68,8 +68,8 @@ public class DBHandler extends SQLiteOpenHelper {
         return contact;
     }
     // Getting All Campings
-    public List<Camping> getAllCampings() {
-        List<Camping> campingList = new ArrayList<Camping>();
+    public ArrayList<Camping> getAllCampings() {
+        ArrayList<Camping> campingList = new ArrayList<Camping>();
         // Select All Query
         String selectQuery = "SELECT * FROM " + TABLE_CAMPINGS;
 
