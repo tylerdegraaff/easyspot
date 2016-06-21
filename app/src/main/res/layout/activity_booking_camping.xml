@@ -21,7 +21,7 @@
         android:textAlignment="textStart"
         android:gravity="start"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_below="@+id/textView35"
+        android:layout_below="@+id/detail_camping_name"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Plot size"
-        android:id="@+id/textView35"
+        android:id="@+id/detail_camping_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:onClick="goToStepThree"
@@ -87,7 +87,7 @@
         android:id="@+id/textView38"
         android:textColor="#ffffff"
         android:layout_below="@+id/booking_start_date"
-        android:layout_alignEnd="@+id/textView35" />
+        android:layout_alignEnd="@+id/detail_camping_name" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -14,7 +14,8 @@
         android:maxHeight="80dp"
         android:maxWidth="80dp"
         android:src="@drawable/camping1"
-        android:layout_marginBottom="20px"/>
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"/>
 
     <TextView
         android:id="@+id/camping_address"
