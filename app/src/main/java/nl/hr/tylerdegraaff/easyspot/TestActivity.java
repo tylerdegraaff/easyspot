@@ -22,9 +22,11 @@ public class TestActivity extends AppCompatActivity {
 
         ArrayList<String> campingNameList;
 
-        db.addCamping(new Camping(1, "Karaoke", "Adress", 3));
-        db.addCamping(new Camping(2, "Biervat", "Straatnaam", 6));
-        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", 8));
+        db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1));
+        db.addCamping(new Camping(2, "Biervat", "Straatnaam", 2));
+        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", 3));
+        db.addCamping(new Camping(3, "Indonesie", "Wegnaam", 4));
+
         // Get the reference of ListViewAnimals
         ListView campingList=(ListView)findViewById(R.id.listViewCampings);
         campingNameList = new ArrayList<String>();

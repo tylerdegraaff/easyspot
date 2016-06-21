@@ -15,7 +15,7 @@ public class ReservationActivity extends AppCompatActivity {
     }
 
     public void onCampingKaraoke(View v){
-        Intent intent = new Intent(this, CampingKaraokeActivity.class);
+        Intent intent = new Intent(this, ReservationDetailActivity.class);
         startActivity(intent);
     }
 }

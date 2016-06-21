@@ -28,13 +28,19 @@ public class SearchCampingActivity extends AppCompatActivity {
         db = new DBHandler(this);
         campings = db.getAllCampings();
 
-        //db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23"));
+//        for(Camping camping : campings) {
+//             db.deleteCamping(camping);
+//        }
+
+        //db.addCamping(new Camping(1, "Camping Blue Sea", "France, Montpellier", R.drawable.camping1));
+        //db.addCamping(new Camping(1, "Camping Holland", "France, Nice", R.drawable.camping2));
+        //db.addCamping(new Camping(1, "Camping Karaoke", "France Marseille", R.drawable.camping3));
         createListView();
         registerClickCallback();
     }
 
     public void Reservate(View v) {
-        Intent intent = new Intent(this, BookingKaraokeActivity.class);
+        Intent intent = new Intent(this, CampingDetailActivity.class);
         startActivity(intent);
     }
 
@@ -50,7 +56,7 @@ public class SearchCampingActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked,
                                     int position, long id) {
-
+                startActivity(new Intent(getApplicationContext(), CampingDetailActivity.class));
                 Camping clickedCamping = campings.get(position);
                 String message = "You clicked on camping " + clickedCamping.getName();
                 Toast.makeText(SearchCampingActivity.this, message, Toast.LENGTH_LONG).show();
@@ -104,22 +110,23 @@ public class SearchCampingActivity extends AppCompatActivity {
             }
 
             // Loop trough all Campings en fill the TextViews
-            for (Camping camping : campings) {
                 // Log for debug use
-                String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
+                //String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
 
-                // Getting the name and address
-                String name = camping.getName();
-                String address = camping.getAddress();
+                Camping currentCamping = campings.get(position);
+
+                // Fill the view
+                ImageView imageView = (ImageView)itemView.findViewById(R.id.camping_image);
+                imageView.setImageResource(currentCamping.getImage());
 
                 // Set camping name text
                 TextView tv_name = (TextView) itemView.findViewById(R.id.camping_name);
-                tv_name.setText(name);
+                tv_name.setText(currentCamping.getName());
 
                 // Set camping address text:
                 TextView tv_address = (TextView) itemView.findViewById(R.id.camping_address);
-                tv_address.setText(address);
-            }
+                tv_address.setText(currentCamping.getAddress());
+
             return itemView;
         }
     }

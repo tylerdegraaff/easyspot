@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/camping_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingRight="10px"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/camping1"
+        android:layout_marginBottom="20px"/>
+
+    <TextView
+        android:id="@+id/camping_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000"
+        android:layout_alignBottom="@+id/camping_image"
+        android:layout_toEndOf="@+id/camping_image"
+        android:textColor="#040404" />
+
+    <TextView
+        android:id="@+id/camping_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/camping_address"
+        android:layout_toRightOf="@+id/camping_image"
+        android:text="Make Shown Here"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff"
+/>
+
+</RelativeLayout>

@@ -20,12 +20,12 @@
         <activity android:name=".BookingCampingActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".ReservationActivity" />
-        <activity android:name=".CampingKaraokeActivity" />
+        <activity android:name=".ReservationDetailActivity" />
         <activity android:name=".BookingMapActivity" />
         <activity android:name=".SearchCampingActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".BookingKaraokeActivity" />
+        <activity android:name=".CampingDetailActivity" />
         <activity android:name=".PayBookingActivity" />
         <activity android:name=".MySpotMainActivity" />
         <activity android:name=".MySpotProfileActivity" />
