@@ -28,7 +28,7 @@ public class SearchCampingActivity extends AppCompatActivity {
         db = new DBHandler(this);
         campings = db.getAllCampings();
 
-        //db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23"));
+        db.addCamping(new Camping(1, "Camping Tyler", "Campingweg 23",));
         createListView();
         registerClickCallback();
     }
@@ -107,6 +107,10 @@ public class SearchCampingActivity extends AppCompatActivity {
             for (Camping camping : campings) {
                 // Log for debug use
                 String log = "Id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " + camping.getAddress();
+
+                // Fill the view
+                ImageView imageView = (ImageView)itemView.findViewById(R.id.camping_image);
+                imageView.setImageResource(camping.getImage());
 
                 // Getting the name and address
                 String name = camping.getName();
