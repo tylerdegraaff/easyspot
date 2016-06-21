@@ -18,7 +18,7 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         DBHandler db = new DBHandler(this);
-        ArrayList<Camping> campings = db.getAllCampings();
+         ArrayList<Camping> campings = db.getAllCampings();
 
         ArrayList<String> campingNameList;
 
@@ -40,7 +40,7 @@ public class TestActivity extends AppCompatActivity {
             // Add the camping to the list
             campingNameList.add("Camping naam:" + name);
             campingNameList.add("Camping adress:" + adress);
-            campingNameList.add("Camping test image:" + image);
+            campingNameList.add("Camping image:" + image);
         }
 
         // Create The Adapter with passing ArrayList as 3rd parameter
