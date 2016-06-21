@@ -4,11 +4,11 @@ public class Camping {
     private int id;
     private String name;
     private String address;
-    private String image;
+    private int image;
     public Camping()
     {
     }
-    public Camping(int id,String name,String address, String image)
+    public Camping(int id,String name,String address, int image)
     {
         this.id=id;
         this.name=name;
@@ -24,7 +24,7 @@ public class Camping {
     public void setAddress(String address) {
         this.address = address;
     }
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
     public int getId() {
@@ -36,7 +36,7 @@ public class Camping {
     public String getName() {
         return name;
     }
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 }
