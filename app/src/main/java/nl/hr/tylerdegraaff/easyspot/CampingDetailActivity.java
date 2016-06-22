@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class CampingDetailActivity extends AppCompatActivity {
 
-    Integer camping_id;
-    String  getCampingId, _campingName, _campingAddress, _campingEmail, _campingFacilities, _campingDescription;
-    int _campingImage, _campingPhone, _campingPrice;
+    //Integer camping_id;
+    //String  getCampingId, _campingName, _campingAddress, _campingEmail, _campingFacilities, _campingDescription;
+    //int _campingImage, _campingPhone, _campingPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,31 +23,40 @@ public class CampingDetailActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_camping_detail);
 
-        DBHandler db = new DBHandler(getApplicationContext());
+        DBHandler db = new DBHandler(this);
 
         //Intent i = getIntent();
         //getCampingId = i.getStringExtra("camping_id");
         //camping_id = Integer.parseInt(getCampingId);
-        ArrayList<Camping> data = db.getCamping(1);
+        //ArrayList<Camping> data = db.getCamping(1);
 
-
-        ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
-
-        for (Camping camping : data) {
-            _campingName = camping.getName();
-            tv_campingImage.setImageResource(camping.getImage());
-            _campingImage = camping.getImage();
-            _campingAddress = camping.getAddress();
-            _campingPhone = camping.getPhone();
-            _campingEmail = camping.getEmail();
-            _campingFacilities = camping.getFac();
-            _campingDescription = camping.getDesc();
-            _campingPrice = camping.getPrice();
-
-            Log.d("", "onCreate: " + camping.getName());
+        ArrayList<Camping> onecampong = db.getCamping(1);
+        for (Camping camping : onecampong){
+            String log = "id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " +
+                    camping.getAddress() + " ,Image: " + camping.getImage() +
+                    " ,Phone: " + camping.getPhone() + " ,Price: " + camping.getPrice() +
+                    " ,Email: " + camping.getEmail() + " ,Description: " + camping.getDesc() +
+                    " ,Facitilitiess: " + camping.getFac();
+            Log.d("------", log + "------");
         }
 
-        Log.d("", "onCreate: " + _campingName);
+
+        //ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
+
+//        for (Camping camping : data) {
+//            _campingName = camping.getName();
+//            tv_campingImage.setImageResource(camping.getImage());
+//            _campingImage = camping.getImage();
+//            _campingAddress = camping.getAddress();
+//            _campingPhone = camping.getPhone();
+//            _campingEmail = camping.getEmail();
+//            _campingFacilities = camping.getFac();
+//            _campingDescription = camping.getDesc();
+//            _campingPrice = camping.getPrice();
+//
+//            Log.d("", "onCreate: " + camping.getName());
+//        }
+
 
 //        ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
 //        tv_campingImage.setImageResource(_campingImage);
