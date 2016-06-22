@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class CampingDetailActivity extends AppCompatActivity {
 
-    //Integer camping_id;
+    Integer camping_id;
     //String  getCampingId, _campingName, _campingAddress, _campingEmail, _campingFacilities, _campingDescription;
     //int _campingImage, _campingPhone, _campingPrice;
 
@@ -25,34 +25,70 @@ public class CampingDetailActivity extends AppCompatActivity {
 
         DBHandler db = new DBHandler(this);
 
-        //Intent i = getIntent();
-        //getCampingId = i.getStringExtra("camping_id");
-        //camping_id = Integer.parseInt(getCampingId);
-        //ArrayList<Camping> data = db.getCamping(1);
+//        Intent i = getIntent();
+//        getCampingId = i.getStringExtra("camping_id");
+//        camping_id = Integer.parseInt(getCampingId);
+        ArrayList<Camping> data = db.getCamping(1);
 
         ArrayList<Camping> onecampong = db.getCamping(1);
+
+
+        TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
+//        ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
+        TextView tv_campingPrice = (TextView)findViewById(R.id.detail_camping_price);
+        TextView tv_campingAddress = (TextView)findViewById(R.id.detail_camping_address);
+        TextView tv_campingPhone = (TextView)findViewById(R.id.detail_camping_phone);
+                TextView tv_campingEmail = (TextView)findViewById(R.id.detail_camping_email);
+                TextView tv_campingDescription = (TextView)findViewById(R.id.detail_camping_description);
+                TextView tv_campingFacilities = (TextView)findViewById(R.id.detail_camping_facilities);
         for (Camping camping : onecampong){
             String log = "id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " +
                     camping.getAddress() + " ,Image: " + camping.getImage() +
                     " ,Phone: " + camping.getPhone() + " ,Price: " + camping.getPrice() +
                     " ,Email: " + camping.getEmail() + " ,Description: " + camping.getDesc() +
                     " ,Facitilitiess: " + camping.getFac();
-            Log.d("------", log + "------");
+                    Log.d("------", log + "------");
+
+                    String _campingName = camping.getName();
+                    tv_campingName.setText( _campingName);
+
+//                    Integer _campingImage = camping.getImage();
+//                    tv_campingImage.setImageResource(_campingImage);
+
+                    Integer _campingPrice = camping.getPrice();
+                    tv_campingPrice.setText("€" + _campingPrice + " p.n");
+
+                    String _campingAddress = camping.getAddress();
+                    tv_campingAddress.setText(_campingAddress);
+
+                    Integer _campingPhone = camping.getPhone();
+                    tv_campingPhone.setText("Tel: " + _campingPhone);
+
+                    String _campingEmail = camping.getEmail();
+                    tv_campingEmail.setText("E-mail: " + _campingEmail);
+
+                    String _campingDescription = camping.getDesc();
+                    tv_campingDescription.setText( _campingDescription);
+
+                    String _campingFacilities = camping.getFac();
+                    tv_campingFacilities.setText( _campingFacilities);
         }
 
-
-        //ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
+//        ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
 
 //        for (Camping camping : data) {
-//            _campingName = camping.getName();
+//            String _campingName = camping.getName();
 //            tv_campingImage.setImageResource(camping.getImage());
-//            _campingImage = camping.getImage();
-//            _campingAddress = camping.getAddress();
-//            _campingPhone = camping.getPhone();
-//            _campingEmail = camping.getEmail();
-//            _campingFacilities = camping.getFac();
-//            _campingDescription = camping.getDesc();
-//            _campingPrice = camping.getPrice();
+//            Integer _campingImage = camping.getImage();
+//            String _campingAddress = camping.getAddress();
+//            Integer _campingPhone = camping.getPhone();
+//            String _campingEmail = camping.getEmail();
+//            String _campingFacilities = camping.getFac();
+//            String _campingDescription = camping.getDesc();
+//            Integer _campingPrice = camping.getPrice();
+//
+//            TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
+//            tv_campingName.setText( _campingName);
 //
 //            Log.d("", "onCreate: " + camping.getName());
 //        }

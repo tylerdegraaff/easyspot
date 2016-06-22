@@ -37,7 +37,7 @@ public class TestActivity extends AppCompatActivity {
                     " ,Facitilitiess: " + camping.getFac();
             Log.d("------", log + "------");
         }
-        
+
 
         /*
         db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1, 123124234, 123, "fasfas@23.com", "heel veel ruimte", "bier, en nog meer bier"));
