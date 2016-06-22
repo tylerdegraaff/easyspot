@@ -10,7 +10,7 @@
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity"
     android:textAlignment="textStart"
     android:gravity="start"
-    android:background="@drawable/background_main">
+    android:background="@drawable/background_create">
 
     <Spinner
         android:layout_width="120dp"

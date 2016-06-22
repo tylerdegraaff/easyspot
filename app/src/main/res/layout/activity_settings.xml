@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.SettingsActivity"
-    android:background="@drawable/background"
+    android:background="@drawable/background_settings"
     android:foregroundGravity="clip_vertical">
 
     <TextView
@@ -17,7 +17,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="General Settings"
         android:id="@+id/textView57"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView58" />
 
@@ -29,7 +29,7 @@
         android:id="@+id/textView58"
         android:layout_marginTop="23dp"
         android:onClick="AccountClick"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView57"
         android:layout_alignStart="@+id/textView59" />
 
@@ -41,7 +41,7 @@
         android:id="@+id/textView59"
         android:layout_marginTop="27dp"
         android:onClick="AccountClick"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView58"
         android:layout_alignParentStart="true" />
 
@@ -65,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="App Settings"
         android:id="@+id/textView60"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_marginTop="24dp"
         android:layout_below="@+id/textView59"
         android:layout_alignParentStart="true" />

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_popup">
+    android:background="@drawable/background_main">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="This lot matches 100% of your priorities"
         android:id="@+id/textView76"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp" />
@@ -34,7 +34,7 @@
         android:id="@+id/cancel_plot"
         android:layout_alignTop="@+id/save_plot"
         android:layout_toStartOf="@+id/textView75"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:id="@+id/save_plot"
         android:onClick="Reservate"
         android:layout_marginTop="19dp"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView75"
         android:layout_toEndOf="@+id/textView75" />
 </RelativeLayout>
