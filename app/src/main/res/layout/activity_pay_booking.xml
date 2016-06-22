@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.PayBookingActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background_main">
 
     <Button
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:id="@+id/textView61"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
         android:layout_below="@+id/textView66"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
         android:layout_marginBottom="33dp"
         android:layout_above="@+id/button15"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="18dp"
         android:autoText="false" />
 

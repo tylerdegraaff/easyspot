@@ -25,9 +25,9 @@ public class CampingDetailActivity extends AppCompatActivity {
         Intent i = getIntent();
         getCampingId = i.getStringExtra("camping_id");
         camping_id = Integer.parseInt(getCampingId);
-        Camping camping = db.getCamping(1);
+        //Camping camping = db.getCamping(1);
 
-        Log.d("", "onCreate: " + camping.getId() + camping.getName());
+        //Log.d("", "onCreate: " + camping.getId() + camping.getName());
 
         _campingName = i.getStringExtra("name");
         _campingImage = i.getStringExtra("image");

@@ -73,23 +73,33 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_CAMPINGS, null, values);
         db.close(); // Closing database connection
     }
+
     // Getting one camping
-    public Camping getCamping(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
+    public ArrayList<Camping> getCamping(int id) {
+        ArrayList<Camping> campingList = new ArrayList<Camping>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM " + TABLE_CAMPINGS + " WHERE id =" + id;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
-        Cursor cursor = db.query(TABLE_CAMPINGS, new String[]{KEY_ID,
-                        KEY_NAME, KEY_RE_ADDR, KEY_IMAGE_ADDR, KEY_PHONE, KEY_PRICE, KEY_EMAIL,
-                        KEY_DESC, KEY_FAC}, KEY_ID + "=?",
-                        new String[]{String.valueOf(id)}, null, null, null, null);
-        if (cursor != null)
-            cursor.moveToFirst();
-
-        Camping camping = new Camping(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), Integer.parseInt(cursor.getString(3)),
-                Integer.parseInt(cursor.getString(4)),Integer.parseInt(cursor.getString(5)),
-                cursor.getString(6),cursor.getString(7),cursor.getString(8));
-        // return camping
-        return camping;
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Camping camping = new Camping();
+                camping.setId(Integer.parseInt(cursor.getString(0)));
+                camping.setName(cursor.getString(1));
+                camping.setAddress(cursor.getString(2));
+                camping.setImage(Integer.parseInt(cursor.getString(3)));
+                camping.setPhone(Integer.parseInt(cursor.getString(4)));
+                camping.setPrice(Integer.parseInt(cursor.getString(5)));
+                camping.setEmail(cursor.getString(6));
+                camping.setDesc(cursor.getString(7));
+                camping.setFac(cursor.getString(8));
+                // Adding contact to list
+                campingList.add(camping);
+            } while (cursor.moveToNext());
+        }
+        return campingList;
     }
     // Getting All Campings
     public ArrayList<Camping> getAllCampings() {

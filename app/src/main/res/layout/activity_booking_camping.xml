@@ -10,7 +10,7 @@
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingCampingActivity"
     android:textAlignment="textStart"
     android:gravity="start"
-    android:background="@drawable/background">
+    android:background="@drawable/background_create">
 
     <Spinner
         android:layout_width="120dp"
@@ -57,7 +57,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:onClick="goToStepThree"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Start date"
         android:id="@+id/textView36"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/plotOptions"
         android:layout_alignParentStart="true" />
 
@@ -75,7 +75,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="End date"
         android:id="@+id/textView37"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_alignTop="@+id/textView36"
         android:layout_alignEnd="@+id/radioButton4" />
 
@@ -85,7 +85,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Persons"
         android:id="@+id/textView38"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/booking_start_date"
         android:layout_alignEnd="@+id/detail_camping_name" />
 
@@ -95,7 +95,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Kids"
         android:id="@+id/textView39"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_alignTop="@+id/textView38"
         android:layout_alignStart="@+id/textView37" />
 
@@ -149,7 +149,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Plot preferences"
         android:id="@+id/textView40"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/editText11"
         android:layout_alignStart="@+id/textView38" />
 
@@ -210,7 +210,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Avoid following places"
         android:id="@+id/textView50"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/radioButton5"
         android:layout_alignStart="@+id/radioButton7"
         android:layout_marginTop="26dp"

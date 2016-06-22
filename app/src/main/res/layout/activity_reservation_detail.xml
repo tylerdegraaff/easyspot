@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ReservationDetailActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background_main">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Date"
         android:id="@+id/textView19"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView18"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
@@ -41,7 +41,7 @@
         android:layout_below="@+id/textView19"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp"
+        android:textSize="13dp"
         android:singleLine="false" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="How much people"
         android:id="@+id/textView21"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView20"
         android:layout_alignParentStart="true"
         android:textSize="18dp" />
@@ -64,7 +64,7 @@
         android:layout_below="@+id/textView21"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
         android:id="@+id/textView23"
         android:layout_below="@+id/textView22"
         android:layout_alignEnd="@+id/textView19"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="18dp" />
 
     <TextView
@@ -86,7 +86,7 @@
         android:layout_below="@+id/textView23"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
         android:id="@+id/textView25"
         android:layout_below="@+id/textView24"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="18dp" />
 
     <TextView
@@ -108,7 +108,7 @@
         android:layout_below="@+id/textView25"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
         android:id="@+id/textView27"
         android:layout_below="@+id/textView26"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="18dp" />
 
     <TextView
@@ -130,7 +130,7 @@
         android:layout_below="@+id/textView27"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -140,7 +140,7 @@
         android:id="@+id/textView29"
         android:layout_below="@+id/textView28"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="18dp" />
 
     <TextView
@@ -152,7 +152,7 @@
         android:layout_below="@+id/textView29"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:textSize="16dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
         android:text="Info"
         android:id="@+id/textView31"
         android:layout_marginTop="31dp"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:layout_below="@+id/textView30"
         android:layout_alignParentStart="true" />
 
