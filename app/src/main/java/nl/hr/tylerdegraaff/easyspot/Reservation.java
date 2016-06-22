@@ -1,25 +1,24 @@
 package nl.hr.tylerdegraaff.easyspot;
 
-/**
- * Created by D. van Straten on 22-6-2016.
- */
 public class Reservation {
-
     private int id;
+    private int camping_id;
 
-    public Reservation(int id) {
-        this.id =id;
+    public Reservation()
+    {
     }
-
+    public Reservation(int id, int camping_id)
+    {
+        this.id=id;
+        this.camping_id=camping_id;
+    }
     public void setId(int id) {
-        this.id = id;
+        this.id=id;
     }
+    public void setCampingId(int camping_id) {this.camping_id=camping_id;}
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-
-    public void setCampingId(int id){
-
-    }
+    public int getCampingId() { return camping_id; }
 }
