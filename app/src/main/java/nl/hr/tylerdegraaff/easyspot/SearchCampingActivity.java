@@ -65,6 +65,7 @@ public class SearchCampingActivity extends AppCompatActivity {
                 Intent intent = new Intent(SearchCampingActivity.this, CampingDetailActivity.class);
 
                 String imageId = String.valueOf(clickedCamping.getImage());
+                String camping_id = String.valueOf(clickedCamping.getId());
                 String phone = String.valueOf(clickedCamping.getPhone());
                 String price = String.valueOf(clickedCamping.getPrice());
 
@@ -76,6 +77,7 @@ public class SearchCampingActivity extends AppCompatActivity {
                 intent.putExtra("email", clickedCamping.getEmail());
                 intent.putExtra("facilities", clickedCamping.getFac());
                 intent.putExtra("price", price);
+                intent.putExtra("camping_id", camping_id);
 
                 startActivity(intent);
                 //String message = "You clicked on camping " + clickedCamping.getImage();

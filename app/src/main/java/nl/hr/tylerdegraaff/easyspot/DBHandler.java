@@ -84,12 +84,12 @@ public class DBHandler extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        Camping contact = new Camping(Integer.parseInt(cursor.getString(0)),
+        Camping camping = new Camping(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2), Integer.parseInt(cursor.getString(3)),
                 Integer.parseInt(cursor.getString(4)),Integer.parseInt(cursor.getString(5)),
                 cursor.getString(6),cursor.getString(7),cursor.getString(8));
         // return camping
-        return contact;
+        return camping;
     }
     // Getting All Campings
     public ArrayList<Camping> getAllCampings() {
@@ -179,7 +179,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Reservation reservation = new Reservation(0);
+                Reservation reservation = new Reservation();
                 reservation.setId(Integer.parseInt(cursor.getString(0)));
                 reservation.setCampingId(Integer.parseInt(cursor.getString(1)));
                 // Adding contact to list

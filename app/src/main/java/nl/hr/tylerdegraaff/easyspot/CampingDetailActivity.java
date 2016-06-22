@@ -1,14 +1,18 @@
 package nl.hr.tylerdegraaff.easyspot;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class CampingDetailActivity extends AppCompatActivity {
 
-    String  _campingName, _campingAddress, _campingImage, _campingEmail, _campingPhone, _campingPrice, _campingFacilities, _campingDescription;
+    DBHandler db;
+    Integer camping_id;
+    String  getCampingId, _campingName, _campingAddress, _campingImage, _campingEmail, _campingPhone, _campingPrice, _campingFacilities, _campingDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +20,15 @@ public class CampingDetailActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_camping_detail);
 
+        db = new DBHandler(getApplicationContext());
+
         Intent i = getIntent();
+        getCampingId = i.getStringExtra("camping_id");
+        camping_id = Integer.parseInt(getCampingId);
+        Camping camping = db.getCamping(1);
+
+        Log.d("", "onCreate: " + camping.getId() + camping.getName());
+
         _campingName = i.getStringExtra("name");
         _campingImage = i.getStringExtra("image");
         _campingAddress = i.getStringExtra("address");
@@ -29,7 +41,7 @@ public class CampingDetailActivity extends AppCompatActivity {
 
         // NAME
         TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
-        tv_campingName.setText(_campingName);
+        tv_campingName.setText(getCampingId + _campingName);
 
         // PRICE
         TextView tv_campingPrice = (TextView)findViewById(R.id.detail_camping_price);
