@@ -11,7 +11,7 @@ public class ReservationDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_camping_karaoke);
+        setContentView(R.layout.activity_reservation_detail);
     }
 
     public void onAskEdit(View v){

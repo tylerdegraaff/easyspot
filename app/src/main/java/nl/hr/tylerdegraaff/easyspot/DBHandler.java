@@ -170,14 +170,14 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // Add a reservations
-    public void addReservation(Reservation reservation){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(KEY_CAMPING_ID, reservation.getCampingId()); // Camping Id
-        // Inserting Row
-        db.insert(TABLE_RESERVATIONS, null, values);
-        db.close(); // Closing database connection
-    }
+//    public void addReservation(Reservation reservation){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//        values.put(KEY_CAMPING_ID, reservation.getCampingId()); // Camping Id
+//        // Inserting Row
+//        db.insert(TABLE_RESERVATIONS, null, values);
+//        db.close(); // Closing database connection
+//    }
 
     // Get all reservations
     public ArrayList<Reservation> getAllReservations() {
@@ -191,7 +191,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Reservation reservation = new Reservation();
+                Reservation reservation = new Reservation(0);
                 reservation.setId(Integer.parseInt(cursor.getString(0)));
                 reservation.setCampingId(Integer.parseInt(cursor.getString(1)));
                 // Adding contact to list
