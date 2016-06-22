@@ -26,6 +26,16 @@ public class TestActivity extends AppCompatActivity {
         ArrayList<Camping> campings = db.getAllCampings();
         ArrayList<String> campingNameList;
 
+        db.addCamping(new Camping(1, "Camping Blue Sea", "France, Montpellier", R.drawable.camping1,
+                90325252, 120, "campingbluesea@info.fr", "Relaxing place with an amazing blue sea. " +
+                "Come see the the beautiful fishes by yourself. Or are you afraid for the other creatures. The sharks won't eat you, we promise!",
+                "Amazing blue sea, Restaurants, Shops"));
+        db.addCamping(new Camping(2, "Camping Hollandia", "France, Nice", R.drawable.camping2,
+                90852675, 95, "campingholland@info.fr", "For all the Dutch people, who needs a really nice holiday but also wants some Dutchies around them. " +
+                "Come do lots of sport activity and join our own EK poule.", "Sport activity, Restaurants, Dutch events"));
+        db.addCamping(new Camping(3, "Camping Karaoke", "France, Marseille", R.drawable.camping3,
+                90295062, 80, "campingkaraoke@info.fr", "Screaming with your terrible voice, just come here en sing every song that you always wanted. " +
+                "Done with singing? Lets hangout out with some nice drinks!", "Karaoke bar, Kids place, Supermarket"));
 
         // Get one camping section
         ArrayList<Camping> onecampong = db.getCamping(1);
@@ -39,9 +49,8 @@ public class TestActivity extends AppCompatActivity {
         }
 
 
-        /*
-        db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1, 123124234, 123, "fasfas@23.com", "heel veel ruimte", "bier, en nog meer bier"));
-        db.addCamping(new Camping(2, "otrto", "DJSAD", 2, 98765454, 87, "opop@klfsd.com", "stoer,stoer", "wij willen alleen maar dronken zijn"));
+//        db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1, 123124234, 123, "fasfas@23.com", "heel veel ruimte", "bier, en nog meer bier"));
+//        db.addCamping(new Camping(2, "otrto", "DJSAD", 2, 98765454, 87, "opop@klfsd.com", "stoer,stoer", "wij willen alleen maar dronken zijn"));
         // Get the reference of ListViewCampings
         ListView campingList=(ListView)findViewById(R.id.listViewCampings);
         campingNameList = new ArrayList<String>();
@@ -80,7 +89,6 @@ public class TestActivity extends AppCompatActivity {
                 new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, campingNameList);
         // Set The Adapter
         campingList.setAdapter(arrayAdapter);
-        *.
 
 
         /* THIS IS FOR RESERVATIONS

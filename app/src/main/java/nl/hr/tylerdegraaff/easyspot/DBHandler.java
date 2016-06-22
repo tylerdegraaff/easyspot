@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DBHandler extends SQLiteOpenHelper {
     // Database Version
-    private static final int DATABASE_VERSION = 11;
+    private static final int DATABASE_VERSION = 19;
     // Database Name
     private static final String DATABASE_NAME = "easy_spot";
     // Contacts table name
@@ -32,6 +32,9 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_FAC = "camping_facilities";
     // Reservations Table Columns names
     private static final String KEY_CAMPING_ID = "camping_id";
+    private static final String KEY_START_DATE = "start_date";
+    private static final String KEY_END_DATE = "end_date";
+
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -45,13 +48,15 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_CAMPING_TABLE);
 
         String CREATE_RESERVATIONS_TABLE = "CREATE TABLE " + TABLE_RESERVATIONS + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_CAMPING_ID + " INTEGER" + ")";
+                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_CAMPING_ID + " INTEGER,"
+                + KEY_START_DATE + " TEXT," + KEY_END_DATE + " TEXT" +")";
         db.execSQL(CREATE_RESERVATIONS_TABLE);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CAMPINGS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_RESERVATIONS);
         // Creating tables again
         onCreate(db);
     }
@@ -167,15 +172,18 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    // Add a reservations
-//    public void addReservation(Reservation reservation){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//        values.put(KEY_CAMPING_ID, reservation.getCampingId()); // Camping Id
-//        // Inserting Row
-//        db.insert(TABLE_RESERVATIONS, null, values);
-//        db.close(); // Closing database connection
-//    }
+     // Add a reservations
+    public void addReservation(Reservation reservation){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(KEY_CAMPING_ID, reservation.getCampingId()); // Camping Id
+        values.put(KEY_START_DATE, reservation.getStart_date()); // Start date
+        values.put(KEY_END_DATE, reservation.getEnd_date()); // End date
+        // Inserting Row
+        db.insert(TABLE_RESERVATIONS, null, values);
+        db.close(); // Closing database connection
+    }
 
     // Get all reservations
     public ArrayList<Reservation> getAllReservations() {
@@ -192,6 +200,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 Reservation reservation = new Reservation();
                 reservation.setId(Integer.parseInt(cursor.getString(0)));
                 reservation.setCampingId(Integer.parseInt(cursor.getString(1)));
+                reservation.setStart_date(cursor.getString(2));
+                reservation.setEnd_date(cursor.getString(3));
                 // Adding contact to list
                 reservationList.add(reservation);
             } while (cursor.moveToNext());
