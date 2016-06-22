@@ -7,6 +7,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    DBHandler db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
