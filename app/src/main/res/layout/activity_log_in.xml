@@ -7,16 +7,6 @@
     android:background="@drawable/background_main">
 
     <ImageView
-        android:layout_width="800dp"
-        android:layout_height="300dp"
-        android:id="@+id/imageView11"
-        android:src="@drawable/tree_background"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView12"
