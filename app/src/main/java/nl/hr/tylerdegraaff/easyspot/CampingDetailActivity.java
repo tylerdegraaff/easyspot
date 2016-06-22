@@ -28,7 +28,7 @@ public class CampingDetailActivity extends AppCompatActivity {
         Intent i = getIntent();
         String getCampingId = i.getStringExtra("camping_id");
         Integer camping_id = Integer.parseInt(getCampingId);
-        ArrayList<Camping> onecampong = db.getCamping(camping_id);
+        ArrayList<Camping> onecamping = db.getCamping(camping_id);
 
         TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
         ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
