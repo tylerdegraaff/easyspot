@@ -34,7 +34,7 @@
         android:id="@+id/cancel_plot"
         android:layout_alignTop="@+id/save_plot"
         android:layout_toStartOf="@+id/textView75"
-        android:textColor="#000000" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:id="@+id/save_plot"
         android:onClick="Reservate"
         android:layout_marginTop="19dp"
-        android:textColor="#000000"
+        android:textColor="@android:color/white"
         android:layout_below="@+id/textView75"
         android:layout_toEndOf="@+id/textView75" />
 </RelativeLayout>

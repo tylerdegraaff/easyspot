@@ -30,7 +30,7 @@ public class CampingDetailActivity extends AppCompatActivity {
 //        camping_id = Integer.parseInt(getCampingId);
         ArrayList<Camping> data = db.getCamping(1);
 
-        ArrayList<Camping> onecampong = db.getCamping(1);
+        ArrayList<Camping> onecamping = db.getCamping(1);
 
 
         TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
@@ -41,7 +41,7 @@ public class CampingDetailActivity extends AppCompatActivity {
                 TextView tv_campingEmail = (TextView)findViewById(R.id.detail_camping_email);
                 TextView tv_campingDescription = (TextView)findViewById(R.id.detail_camping_description);
                 TextView tv_campingFacilities = (TextView)findViewById(R.id.detail_camping_facilities);
-        for (Camping camping : onecampong){
+        for (Camping camping : onecamping){
             String log = "id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " +
                     camping.getAddress() + " ,Image: " + camping.getImage() +
                     " ,Phone: " + camping.getPhone() + " ,Price: " + camping.getPrice() +

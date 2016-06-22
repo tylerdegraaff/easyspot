@@ -8,9 +8,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nl.hr.tylerdegraaff.easyspot.BookingMapActivity"
-    android:onClick="SpotSelected"
     android:focusable="false"
-    android:background="@drawable/camping_map"
-    android:id="@+id/mapRelativeLayout">
+    android:id="@+id/mapRelativeLayout"
+    android:nestedScrollingEnabled="false">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SpotSelected"
+        android:nestedScrollingEnabled="false">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/img"
+            android:scaleType="center"
+            android:background="#fff"
+            android:src="@drawable/camping_full"
+            android:onClick="SpotSelected" />
+
+    </HorizontalScrollView>
 </RelativeLayout>

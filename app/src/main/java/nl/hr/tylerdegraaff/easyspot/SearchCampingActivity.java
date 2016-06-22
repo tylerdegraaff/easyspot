@@ -29,10 +29,6 @@ public class SearchCampingActivity extends AppCompatActivity {
         db = new DBHandler(this);
         campings = db.getAllCampings();
 
-        for(Camping camping : campings) {
-            db.deleteCamping(camping);
-        }
-
 //        db.addCamping(new Camping(1, "Camping Blue Sea", "France, Montpellier", R.drawable.camping1,
 //                90325252, 120, "campingbluesea@info.fr","Relaxing place with an amazing blue sea. Come see the the beautiful fishes by yourself. Or are you afraid for the other creatures. The sharks won't eat you, we promise!", "Amazing blue sea, Restaurants, Shops"));
 //        db.addCamping(new Camping(2, "Camping Holland", "France, Nice", R.drawable.camping2,
