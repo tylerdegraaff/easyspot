@@ -99,8 +99,6 @@ public class DBHandler extends SQLiteOpenHelper {
                 campingList.add(camping);
             } while (cursor.moveToNext());
         }
-
-        // return contact list
         return campingList;
     }
     // Getting All Campings
