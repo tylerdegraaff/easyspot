@@ -191,7 +191,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Reservation reservation = new Reservation(0);
+                Reservation reservation = new Reservation();
                 reservation.setId(Integer.parseInt(cursor.getString(0)));
                 reservation.setCampingId(Integer.parseInt(cursor.getString(1)));
                 // Adding contact to list
