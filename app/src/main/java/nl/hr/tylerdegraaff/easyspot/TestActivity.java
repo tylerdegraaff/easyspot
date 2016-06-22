@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import org.w3c.dom.Text;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +26,22 @@ public class TestActivity extends AppCompatActivity {
         ArrayList<Camping> campings = db.getAllCampings();
         ArrayList<String> campingNameList;
 
+        /*
+        // Get one camping section
+        ArrayList<Camping> onecampong = db.getCamping(1);
+        for (Camping camping : onecampong){
+            String log = "id: " + camping.getId() + " ,Name: " + camping.getName() + " ,Address: " +
+                    camping.getAddress() + " ,Image: " + camping.getImage() +
+                    " ,Phone: " + camping.getPhone() + " ,Price: " + camping.getPrice() +
+                    " ,Email: " + camping.getEmail() + " ,Description: " + camping.getDesc() +
+                    " ,Facitilitiess: " + camping.getFac();
+            Log.d("------", log + "------");
+        }
+        */
+
         db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1, 123124234, 123, "fasfas@23.com", "heel veel ruimte", "bier, en nog meer bier"));
         db.addCamping(new Camping(2, "otrto", "DJSAD", 2, 98765454, 87, "opop@klfsd.com", "stoer,stoer", "wij willen alleen maar dronken zijn"));
-//         Get the reference of ListViewCampings
+        // Get the reference of ListViewCampings
         ListView campingList=(ListView)findViewById(R.id.listViewCampings);
         campingNameList = new ArrayList<String>();
         for (Camping camping : campings) {
@@ -36,7 +51,7 @@ public class TestActivity extends AppCompatActivity {
                     " ,Phone: " + camping.getPhone() + " ,Price: " + camping.getPrice() +
                     " ,Email: " + camping.getEmail() + " ,Description: " + camping.getDesc() +
                     " ,Facitilitiess: " + camping.getFac();
-            Log.d("------", log + "------");
+            // Log.d("------", log + "------");
 
             // Getting the name and adress
             String name = camping.getName();
