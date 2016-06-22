@@ -26,7 +26,7 @@ public class TestActivity extends AppCompatActivity {
         ArrayList<Camping> campings = db.getAllCampings();
         ArrayList<String> campingNameList;
 
-        /*
+
         // Get one camping section
         ArrayList<Camping> onecampong = db.getCamping(1);
         for (Camping camping : onecampong){
@@ -37,8 +37,9 @@ public class TestActivity extends AppCompatActivity {
                     " ,Facitilitiess: " + camping.getFac();
             Log.d("------", log + "------");
         }
-        */
+        
 
+        /*
         db.addCamping(new Camping(1, "fdfsfsd", "Adress", 1, 123124234, 123, "fasfas@23.com", "heel veel ruimte", "bier, en nog meer bier"));
         db.addCamping(new Camping(2, "otrto", "DJSAD", 2, 98765454, 87, "opop@klfsd.com", "stoer,stoer", "wij willen alleen maar dronken zijn"));
         // Get the reference of ListViewCampings
@@ -79,6 +80,7 @@ public class TestActivity extends AppCompatActivity {
                 new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, campingNameList);
         // Set The Adapter
         campingList.setAdapter(arrayAdapter);
+        *.
 
 
         /* THIS IS FOR RESERVATIONS
