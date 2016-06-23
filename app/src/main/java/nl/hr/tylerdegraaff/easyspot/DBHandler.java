@@ -185,6 +185,30 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close(); // Closing database connection
     }
 
+    // Getting one camping
+    public ArrayList<Reservation> getReservation(int id) {
+        ArrayList<Reservation> reservationlist = new ArrayList<Reservation>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM " + TABLE_RESERVATIONS + " WHERE id =" + id;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Reservation reservation = new Reservation();
+                reservation.setId(Integer.parseInt(cursor.getString(0)));
+                reservation.setCampingId(Integer.parseInt(cursor.getString(1)));
+                reservation.setStart_date(cursor.getString(2));
+                reservation.setEnd_date(cursor.getString(3));
+
+                // Adding contact to list
+                reservationlist.add(reservation);
+            } while (cursor.moveToNext());
+        }
+        return reservationlist;
+    }
+
     // Get all reservations
     public ArrayList<Reservation> getAllReservations() {
         ArrayList<Reservation> reservationList = new ArrayList<Reservation>();

@@ -3,7 +3,6 @@ package nl.hr.tylerdegraaff.easyspot;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -11,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,7 +26,7 @@ public class SearchCampingActivity extends AppCompatActivity {
 
         db = new DBHandler(this);
         campings = db.getAllCampings();
-        
+
         createListView();
         registerClickCallback();
     }
@@ -79,11 +77,11 @@ public class SearchCampingActivity extends AppCompatActivity {
                 Camping currentCamping = campings.get(position);
 
                 // Fill the view
-                ImageView imageView = (ImageView)itemView.findViewById(R.id.camping_image);
+                ImageView imageView = (ImageView)itemView.findViewById(R.id.res_detail_image);
                 imageView.setImageResource(currentCamping.getImage());
 
                 // Set camping name text
-                TextView tv_name = (TextView) itemView.findViewById(R.id.camping_name);
+                TextView tv_name = (TextView) itemView.findViewById(R.id.res_detail_campingName);
                 tv_name.setText(currentCamping.getName());
 
                 // Set camping address text:

@@ -4,15 +4,16 @@
     android:layout_width="match_parent" >
 
     <ImageView
-        android:id="@+id/camping_image"
+        android:id="@+id/res_detail_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="10px"
+        android:paddingRight="10dp"
         android:adjustViewBounds="true"
         android:maxHeight="80dp"
         android:maxWidth="80dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/camping1"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
@@ -21,16 +22,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camping Address"
-        android:layout_alignBottom="@+id/camping_image"
-        android:layout_toEndOf="@+id/camping_image"
+        android:layout_alignBottom="@+id/res_detail_image"
+        android:layout_toEndOf="@+id/res_detail_image"
         android:textColor="#040404" />
 
     <TextView
-        android:id="@+id/camping_name"
+        android:id="@+id/res_detail_campingName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/camping_address"
-        android:layout_toRightOf="@+id/camping_image"
+        android:layout_toRightOf="@+id/res_detail_image"
         android:text="Camping name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,10 +14,8 @@ import java.util.ArrayList;
 
 public class CampingDetailActivity extends AppCompatActivity {
 
-    //Integer camping_id;
-    //String  getCampingId, _campingName, _campingAddress, _campingEmail, _campingFacilities, _campingDescription;
-    //int _campingImage, _campingPhone, _campingPrice;
-
+    Integer camping_id;
+    String getCampingId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +25,21 @@ public class CampingDetailActivity extends AppCompatActivity {
         DBHandler db = new DBHandler(this);
 
         Intent i = getIntent();
-        String getCampingId = i.getStringExtra("camping_id");
-        Integer camping_id = Integer.parseInt(getCampingId);
+        getCampingId = i.getStringExtra("camping_id");
+        camping_id = Integer.parseInt(getCampingId);
         ArrayList<Camping> onecamping = db.getCamping(camping_id);
+
+        Button bookNow = (Button) findViewById(R.id.reservate);
+        bookNow.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent  = new Intent(CampingDetailActivity.this, BookingGeneralActivity.class);
+                intent.putExtra("camping_id", getCampingId);
+                Log.d("", "bookNow: " + getCampingId);
+                startActivity(intent);
+            }
+        });
 
         TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
         ImageView tv_campingImage = (ImageView)findViewById(R.id.detail_camping_image);
@@ -61,9 +72,4 @@ public class CampingDetailActivity extends AppCompatActivity {
     public void Back(View view) {
         finish();
     }
-
-    public void bookNow(View v) {
-        startActivity(new Intent(this, BookingGeneralActivity.class));
-    }
-
 }
