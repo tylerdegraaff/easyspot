@@ -14,12 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pay"
-        android:id="@+id/button15"
+        android:id="@+id/button_pay"
         android:onClick="onPay"
         android:background="@drawable/button_selector"
         android:textColor="#ffffff"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textView62"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="41dp" />
 
@@ -27,42 +26,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Lot 47 - Info"
-        android:id="@+id/textView61"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Size: Medium"
-        android:id="@+id/textView62"
-        android:layout_below="@+id/textView61"
-        android:layout_alignStart="@+id/textView64"
-        android:textColor="#000000" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Animals: Allowed"
         android:id="@+id/textView63"
-        android:layout_below="@+id/textView62"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Kids friendly"
-        android:id="@+id/textView64"
-        android:layout_below="@+id/textView63"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/pay_address"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,9 +40,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small distance from the showers"
         android:id="@+id/textView65"
-        android:layout_below="@+id/textView64"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_below="@+id/textView66"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,9 +50,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Great free WiFi connection"
         android:id="@+id/textView66"
-        android:layout_below="@+id/textView65"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_below="@+id/textView63"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,40 +60,39 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Cost"
         android:id="@+id/textView67"
-        android:layout_below="@+id/textView66"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_above="@+id/price_day"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="12 x 120 = 1440 euro"
-        android:id="@+id/textView69"
+        android:id="@+id/price_day"
         android:textColor="#000000"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/textView61" />
+        android:layout_above="@+id/price_people"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Period: 26 Aug - 6 Sep"
-        android:id="@+id/textView68"
+        android:id="@+id/pay_date"
         android:textColor="#000000"
-        android:layout_below="@+id/textView67"
-        android:layout_alignStart="@+id/textView66" />
+        android:layout_above="@+id/textView67"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="10 x 4 = 40 euro"
-        android:id="@+id/textView71"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView69"
-        android:textColor="#000000" />
+        android:id="@+id/price_people"
+        android:textColor="#000000"
+        android:layout_above="@+id/textView72"
+        android:layout_alignStart="@+id/textView72" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -131,32 +100,72 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="________________"
         android:id="@+id/textView72"
-        android:layout_below="@+id/textView71"
-        android:layout_alignStart="@+id/textView71"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:layout_above="@+id/price_total"
+        android:layout_toEndOf="@+id/pay_camping_name" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Total: 1480 euro"
-        android:id="@+id/textView73"
+        android:id="@+id/price_total"
         android:textColor="#000000"
         android:textSize="17dp"
-        android:layout_below="@+id/textView72"
-        android:layout_alignEnd="@+id/textView69" />
+        android:layout_above="@+id/pay_reservation"
+        android:layout_alignEnd="@+id/price_day"
+        android:layout_marginBottom="27dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Payment for reservation is 148,00 euro"
-        android:id="@+id/textView74"
+        android:id="@+id/pay_reservation"
         android:layout_marginBottom="33dp"
-        android:layout_above="@+id/button15"
+        android:layout_above="@+id/button_pay"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:textSize="18dp"
         android:autoText="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Camping Name"
+        android:id="@+id/pay_camping_name"
+        android:layout_alignParentStart="true"
+        android:textColor="#080808" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lot 47"
+        android:id="@+id/textView14"
+        android:textColor="#040404"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="France, Nice"
+        android:id="@+id/pay_address"
+        android:layout_below="@+id/pay_camping_name"
+        android:layout_alignParentStart="true"
+        android:textColor="#040404" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date"
+        android:id="@+id/textView20"
+        android:layout_above="@+id/pay_date"
+        android:layout_centerHorizontal="true"
+        android:textColor="#040404" />
 
 </RelativeLayout>

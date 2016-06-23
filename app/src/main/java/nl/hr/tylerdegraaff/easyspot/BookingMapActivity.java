@@ -3,6 +3,7 @@ package nl.hr.tylerdegraaff.easyspot;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -21,12 +22,21 @@ public class BookingMapActivity extends AppCompatActivity {
     private LayoutInflater layoutInflater;
     private RelativeLayout relativeLayout;
 
+    String getCampingId, getStartDate, getEndDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_booking_map);
         relativeLayout = (RelativeLayout) findViewById(R.id.mapRelativeLayout);
+
+        Intent i = getIntent();
+        getCampingId = i.getStringExtra("camping_id");
+        getStartDate = i.getStringExtra("start_date");
+        getEndDate = i.getStringExtra("end_date");
+
+        //Log.d("", "ID: " + getCampingId + " Start: " + getStartDate + " End: " + getEndDate  );
     }
 
     public void SpotSelected(View view) {
@@ -49,8 +59,13 @@ public class BookingMapActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), PayBookingActivity.class));
+                Intent intent = new Intent(getApplicationContext(), PayBookingActivity.class);
+                intent.putExtra("camping_id", getCampingId);
+                intent.putExtra("start_date", getStartDate);
+                intent.putExtra("end_date", getEndDate);
+                Log.d("", "CampingID: " + getCampingId + " Start: " + getStartDate + " End " + getEndDate);
                 selectedPlotPopUp.dismiss();
+                startActivity(intent);
             }
         });
     }

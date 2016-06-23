@@ -24,9 +24,9 @@ public class BookingGeneralActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent  = new Intent(BookingGeneralActivity.this, BookingMapActivity.class);
+                Intent intent  = new Intent(BookingGeneralActivity.this, BookingCampingActivity.class);
                 intent.putExtra("camping_id", getCampingId);
-                Log.d("", "bookNow: " + getCampingId);
+                Log.d("", "CampingID: " + getCampingId);
                 startActivity(intent);
             }
         });

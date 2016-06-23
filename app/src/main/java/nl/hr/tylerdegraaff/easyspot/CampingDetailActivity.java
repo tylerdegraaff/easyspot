@@ -1,7 +1,6 @@
 package nl.hr.tylerdegraaff.easyspot;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,14 +28,14 @@ public class CampingDetailActivity extends AppCompatActivity {
         camping_id = Integer.parseInt(getCampingId);
         ArrayList<Camping> onecamping = db.getCamping(camping_id);
 
-        Button bookNow = (Button) findViewById(R.id.reservate);
+        Button bookNow = (Button) findViewById(R.id.reservate3);
         bookNow.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent  = new Intent(CampingDetailActivity.this, BookingGeneralActivity.class);
                 intent.putExtra("camping_id", getCampingId);
-                Log.d("", "bookNow: " + getCampingId);
+                Log.d("", "Camping_ID: " + getCampingId);
                 startActivity(intent);
             }
         });
