@@ -39,6 +39,7 @@ public class CampingDetailActivity extends AppCompatActivity {
                 Log.d("", "bookNow: " + getCampingId);
                 startActivity(intent);
             }
+
         });
 
         TextView tv_campingName = (TextView)findViewById(R.id.detail_camping_name);
